@@ -1,0 +1,34 @@
+.footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+
+.list-unstyled li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.footer-phone {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  display: inline-block;
+}
+
+.footer_copyright {
+  text-align: center;
+}
+.footer .footer_btn:hover
+{
+  color: var(--primary-color);
+}
+.footer h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
