@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../../../core/services/language.service';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing-header',
-  imports: [],
+  imports: [TranslateModule, CommonModule, RouterLink],
   templateUrl: './landing-header.component.html',
   styleUrl: './landing-header.component.css'
 })
 export class LandingHeaderComponent {
 
+  reload() {
+    window.location.reload();
+  }
+
+  langService = inject(LanguageService);
+
+  toggleLanguage() {
+    this.reload();
+    this.langService.switchLanguage();
+  }
 }

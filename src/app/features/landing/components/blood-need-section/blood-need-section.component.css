@@ -1,0 +1,43 @@
+.qh-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.qh-muted {
+  color: rgba(0, 0, 0, .65);
+}
+
+.need-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.need-type {
+  width: 54px;
+  font-weight: 900;
+  color: var(--secondary-color);
+}
+
+.need-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(16, 23, 39, .10);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.need-fill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 999px;
+}
+
+.need-level {
+  width: 52px;
+  text-align: end;
+  font-weight: 800;
+  color: rgba(0, 0, 0, .65);
+}

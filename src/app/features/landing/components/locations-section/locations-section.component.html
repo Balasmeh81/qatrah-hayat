@@ -1,0 +1,129 @@
+<section id="locations" class="qh-section-alt" data-aos="fade-up">
+  <div class="container py-5">
+    <div class="row align-items-center g-4">
+      <!-- LEFT: list -->
+      <div class="col-lg-6">
+        <h2 class="section-title mb-2">{{ "LOC_TITLE" | translate }}</h2>
+        <p class="section-subtitle mb-4">{{ "LOC_DESC" | translate }}</p>
+
+        <div class="row g-3">
+          <div
+            class="col-12"
+            *ngFor="let loc of locations; let i = index"
+            data-aos="fade-up"
+            [attr.data-aos-delay]="150 + i * 80"
+          >
+            <button
+              type="button"
+              class="qh-card location-card p-4 w-100"
+              (click)="selectLocation(loc)"
+              [class.active]="selectedLocation.id"
+            >
+              <div
+                class="d-flex justify-content-between align-items-start gap-3"
+              >
+                <div>
+                  <h5 class="card-title mb-1">
+                    {{ loc.titleKey | translate }}
+                  </h5>
+                  <p class="qh-muted mb-2">{{ loc.descKey | translate }}</p>
+
+                  <div class="location-meta d-flex flex-wrap gap-2">
+                    <span class="meta-pill">
+                      <i class="fa-solid fa-clock me-1"></i>
+                      {{ loc.hoursKey | translate }}
+                    </span>
+                    <span class="meta-pill">
+                      <i class="fa-solid fa-location-dot me-1"></i>
+                      {{ loc.cityKey | translate }}
+                    </span>
+                  </div>
+                </div>
+
+                <span class="select-badge">
+                  {{
+                    selectedLocation.id === loc.id
+                      ? ("SELECTED" | translate)
+                      : ("VIEW" | translate)
+                  }}
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <small class="text-muted d-block mt-3">
+          {{ "LOC_NOTE" | translate }}
+        </small>
+      </div>
+
+      <!-- RIGHT: interactive preview -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+        <div class="map-placeholder">
+          <!-- fake map grid -->
+          <div class="map-grid"></div>
+
+          <!-- pin -->
+          <div class="map-pin" aria-hidden="true">
+            <span class="pin-dot"></span>
+          </div>
+
+          <!-- card -->
+          <div class="map-inner">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <h5 class="mb-1">
+                  {{ selectedLocation.titleKey | translate }}
+                </h5>
+                <p class="qh-muted mb-2">
+                  <i class="fa-solid fa-location-dot me-1"></i>
+                  {{ selectedLocation.addressKey | translate }}
+                </p>
+              </div>
+
+              <span class="status-pill">
+                {{ "OPEN_NOW" | translate }}
+                <span class="live-dot"></span>
+              </span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="meta-pill">
+                <i class="fa-solid fa-clock me-1"></i>
+                {{ selectedLocation.hoursKey | translate }}
+              </span>
+              <span class="meta-pill">
+                <i class="fa-solid fa-phone me-1"></i>
+                {{ selectedLocation.phoneKey | translate }}
+              </span>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <button
+                class="btn-qh-primary px-4"
+                type="button"
+                (click)="copyAddress()"
+              >
+                <i class="fa-regular fa-copy me-2"></i>
+                {{ "COPY_ADDRESS" | translate }}
+              </button>
+
+              <button
+                class="btn-qh-secondary px-4 py-2"
+                type="button"
+                (click)="openMap()"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>
+                {{ "OPEN_MAP" | translate }}
+              </button>
+            </div>
+
+            <div class="copy-toast" [class.show]="copied">
+              {{ "COPIED" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

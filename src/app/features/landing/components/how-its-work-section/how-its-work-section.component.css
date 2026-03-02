@@ -1,0 +1,28 @@
+.qh-step {
+  background: var(--surface-card);
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, .05);
+  cursor: pointer;
+}
+
+.qh-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .75rem 1.4rem rgba(0, 0, 0, .12);
+}
+
+.qh-step-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.qh-muted {
+  color: rgba(0, 0, 0, .65);
+  line-height: 1.8;
+}

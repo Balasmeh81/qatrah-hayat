@@ -1,0 +1,31 @@
+<section class="final-cta" data-aos="zoom-in">
+  <div class="container py-5">
+    <div class="final-cta-box p-4 p-md-5 text-center">
+      <div
+        class="d-flex align-items-center justify-content-center mb-4"
+        href="#"
+      >
+        <img
+          data-aos="zoom-in-left"
+          data-aos-delay="150"
+          src="{{
+            langService.currentLang == 'en'
+              ? 'assets/images/Qatrah_Hayat_logo_footer.svg'
+              : 'assets/images/Qatrah_Hayat_logo_ar_footer.svg'
+          }}"
+          alt="Logo"
+          width="250"
+          class="me-2"
+        />
+      </div>
+      <h2 class="final-title mb-2">{{ "FINAL_TITLE" | translate }}</h2>
+      <p class="final-sub mb-4">{{ "FINAL_DESC" | translate }}</p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a class="btn-qh-primary" routerLink="/auth/signup">
+          {{ "FINAL_BTN1" | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

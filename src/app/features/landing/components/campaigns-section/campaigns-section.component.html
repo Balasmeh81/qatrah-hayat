@@ -1,0 +1,19 @@
+<section data-aos="fade-up">
+  <div class="container py-5">
+    <div
+      class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3"
+    >
+      <div>
+        <h2 class="section-title mb-1">{{ "CAMPAIGNS_TITLE" | translate }}</h2>
+        <p class="section-subtitle mb-0">
+          {{ "CAMPAIGNS_SUBTITLE" | translate }}
+        </p>
+      </div>
+
+      <a class="btn-qh-secondary px-4 py-2" routerLink="/campaigns">
+        {{ "VIEW_ALL" | translate }}
+      </a>
+    </div>
+    <app-campaigns-swiper></app-campaigns-swiper>
+  </div>
+</section>

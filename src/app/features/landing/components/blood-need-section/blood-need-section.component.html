@@ -1,0 +1,27 @@
+<section class="qh-section" data-aos="fade-up">
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="section-title">{{ "NEED_TITLE" | translate }}</h2>
+      <p class="section-subtitle mb-0">{{ "NEED_DESC" | translate }}</p>
+    </div>
+
+    <div class="qh-card p-4">
+      <div class="row g-3">
+        <div class="col-md-6" *ngFor="let n of needs" data-aos="zoom-in">
+          <div class="need-row">
+            <div class="need-type">{{ n.type }}</div>
+            <div class="need-bar">
+              <div class="need-fill" [style.width.%]="n.level"></div>
+            </div>
+            <div class="need-level">{{ n.level }}%</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn-qh-primary mt-4 d-inline-block">
+          {{ "DONATE_NOW" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
