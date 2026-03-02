@@ -1,0 +1,96 @@
+.navbar .nav-link {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+/* Underline */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+.navbar .nav-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active */
+.navbar .nav-link.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+ul li {
+  padding-right: 10px;
+}
+
+/*auth buttons style */
+
+.btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.login-btn:active {
+  transform: scale(0.95);
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.login-btn:hover {
+  background-color: var(--primary-color-light);
+  transition: all 0.3s ease;
+}
+
+.signup-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.signup-btn:focus {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.lang-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.lang-btn:active {
+  transform: scale(0.95);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.lang-btn .lang-letter {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 5px;
+}

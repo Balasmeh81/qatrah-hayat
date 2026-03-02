@@ -1,0 +1,123 @@
+<section id="about-us" class="about-us-section py-5">
+  <div class="container">
+    <!-- Header -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="section-title mb-3">{{ "ABOUT_US_TITLE" | translate }}</h2>
+        <p class="about-us-subtitle mb-4">
+          <strong>{{ "QATRAH_HAYAT" | translate }}</strong>
+          {{ "aboutUs_subtitle" | translate }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="row align-items-stretch g-4">
+      <!-- LEFT: User Features -->
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+        <div class="row g-3">
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="qh-card p-4 h-100">
+              <h5 class="card-title mb-2">
+                {{ "USER_FEATURE_1_TITLE" | translate }}
+              </h5>
+              <p class="mb-0 qh-muted">
+                {{ "USER_FEATURE_1_DESC" | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
+            <div class="qh-card p-4 h-100">
+              <h5 class="card-title mb-2">
+                {{ "USER_FEATURE_2_TITLE" | translate }}
+              </h5>
+              <p class="mb-0 qh-muted">
+                {{ "USER_FEATURE_2_DESC" | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="qh-card p-4 h-100">
+              <h5 class="card-title mb-2">
+                {{ "USER_FEATURE_3_TITLE" | translate }}
+              </h5>
+              <p class="mb-0 qh-muted">
+                {{ "USER_FEATURE_3_DESC" | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
+            <div class="qh-card p-4 h-100">
+              <h5 class="card-title mb-2">
+                {{ "USER_FEATURE_4_TITLE" | translate }}
+              </h5>
+              <p class="mb-0 qh-muted">
+                {{ "USER_FEATURE_4_DESC" | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Interactive Stats -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+        <div class="stats-card p-4 p-md-5">
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+          >
+            <span class="stats-badge">
+              {{ "APP_LIVE" | translate }}
+              <span class="live-dot"></span>
+            </span>
+
+            <span class="stats-note">
+              {{ "LAST_UPDATE" | translate }}: {{ lastUpdatedLabel }}
+            </span>
+          </div>
+
+          <h5 class="stats-title mt-3 mb-4">
+            {{ "APP_STATS_TITLE" | translate }}
+          </h5>
+
+          <div class="row g-3">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="250">
+              <div class="stat-box">
+                <div class="stat-num-lg">{{ donorsCount | number }}</div>
+                <div class="stat-label">{{ "STAT_DONORS" | translate }}</div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="350">
+              <div class="stat-box">
+                <div class="stat-num-lg">{{ activeRequests | number }}</div>
+                <div class="stat-label">
+                  {{ "STAT_ACTIVE_REQUESTS" | translate }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="450">
+              <div class="stat-box">
+                <div class="stat-num-lg">{{ campaignsCount | number }}</div>
+                <div class="stat-label">{{ "STAT_CAMPAIGNS" | translate }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Buttons -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mt-5">
+      <a class="btn-qh-primary px-4" href="#campaigns">
+        {{ "EXPLORE_CAMPAIGNS" | translate }}
+      </a>
+
+      <a class="btn-qh-secondary px-4" href="#contact">
+        {{ "CONTACT_US" | translate }}
+      </a>
+    </div>
+  </div>
+</section>

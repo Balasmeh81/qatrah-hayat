@@ -1,0 +1,40 @@
+/* RTL: keep arrow at far right */
+:host-context([dir="rtl"]) .accordion-button {
+  text-align: right;
+  justify-content: space-between;
+}
+
+:host-context([dir="rtl"]) .accordion-button::after {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Remove blue highlight + focus ring */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Change ANSWER (body) background when item is open */
+.accordion-collapse.show .accordion-body {
+  background: var(--surface-ground) !important;
+  color: rgba(0, 0, 0, 0.75);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* Change ARROW color when open */
+.accordion-button:not(.collapsed)::after {
+  filter: invert(100%) sepia(12%) saturate(766%) hue-rotate(190deg) brightness(27%) contrast(154%);
+}
+
+.accordion-button.collapsed::after {
+  opacity: 0.55;
+}

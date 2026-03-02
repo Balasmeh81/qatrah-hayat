@@ -1,0 +1,60 @@
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: black;
+}
+
+
+.campaign-card {
+  background-color: var(--surface-card);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-radius: 1rem;
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.status-badge {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.campaign-desc {
+  color: #000;
+  opacity: 0.75;
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-height: 70px;
+}
+
+.btn-campaign-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.btn-campaign-primary:focus {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
+.btn-campaign-outline {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.btn-campaign-outline:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,45 @@
+<div class="card campaign-card h-100 border-0 px-4">
+  <div class="card-body p-4">
+    <div class="d-flex justify-content-between align-items-start mb-3">
+      <span
+        class="badge rounded-pill text-bg-danger-subtle text-danger px-4 py-2 status-badge"
+      >
+        {{ "STATUS_ACTIVE" | translate }}
+      </span>
+      <span class="small text-muted">
+        <i class="far fa-clock me-1"></i>
+        {{ "ENDS_IN" | translate }} 3 {{ "DAYS" | translate }}
+      </span>
+    </div>
+
+    <h5 class="card-title mb-2">
+      {{ "CAMPAIGN_1_TITLE" | translate }}
+    </h5>
+
+    <div class="text-muted mb-3">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="fas fa-location-dot text-muted"></i>
+        <span>{{ "AMMAN" | translate }} - {{ "UNIVERSITY" | translate }}</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i class="fas fa-calendar-day text-muted"></i>
+        <span>2026-03-10</span>
+        {{ langService.currentLang == "en" ? "→" : "←" }}
+        <span>2026-03-12</span>
+      </div>
+    </div>
+
+    <p class="campaign-desc mb-3">
+      {{ "CAMPAIGN_1_DESC" | translate }}
+    </p>
+
+    <div class="d-flex gap-2 flex-wrap">
+      <a class="btn btn-campaign-primary px-4" routerLink="/auth/signup">
+        {{ "JOIN" | translate }}
+      </a>
+      <a class="btn btn-campaign-outline px-4" href="#branches">
+        {{ "VIEW_LOCATION" | translate }}
+      </a>
+    </div>
+  </div>
+</div>

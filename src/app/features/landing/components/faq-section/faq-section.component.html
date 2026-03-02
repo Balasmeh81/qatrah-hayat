@@ -1,0 +1,32 @@
+<section class="qh-section-alt" data-aos="fade-up">
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="section-title">{{ "FAQ_TITLE" | translate }}</h2>
+      <p class="section-subtitle mb-0">{{ "FAQ_DESC" | translate }}</p>
+    </div>
+
+    <div class="accordion" id="qhFaq">
+      <div class="accordion-item" *ngFor="let f of faqs" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#' + f.id"
+          >
+            {{ f.q | translate }}
+          </button>
+        </h2>
+        <div
+          [id]="f.id"
+          class="accordion-collapse collapse"
+          data-bs-parent="#qhFaq"
+        >
+          <div class="accordion-body">
+            {{ f.a | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
