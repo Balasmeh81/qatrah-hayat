@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../../shared/components/footer/footer.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-user-auth-layout',
-  imports: [],
+  imports: [RouterOutlet, FooterComponent],
   templateUrl: './user-auth-layout.component.html',
   styleUrl: './user-auth-layout.component.css'
 })

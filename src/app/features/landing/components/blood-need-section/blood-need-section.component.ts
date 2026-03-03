@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-blood-need-section',
-  imports: [CommonModule, TranslateModule],
+  imports: [RouterLink, CommonModule, TranslateModule],
   templateUrl: './blood-need-section.component.html',
   styleUrl: './blood-need-section.component.css'
 })
