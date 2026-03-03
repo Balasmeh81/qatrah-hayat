@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-us-section',
-  imports: [TranslateModule, CommonModule],
+  imports: [RouterLink, TranslateModule, CommonModule],
   templateUrl: './about-us-section.component.html',
   styleUrl: './about-us-section.component.css'
 })

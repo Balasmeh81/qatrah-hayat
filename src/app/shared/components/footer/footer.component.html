@@ -26,18 +26,30 @@
         </h4>
         <ul class="list-unstyled">
           <li data-aos="fade-down" data-aos-delay="350">
-            <a class="footer_btn" href="#">{{ "HOME" | translate }}</a>
+            <a class="footer_btn" routerLink="/">{{ "HOME" | translate }}</a>
           </li>
           <li data-aos="fade-down" data-aos-delay="400">
-            <a class="footer_btn" href="#">{{
-              "DONATION_REQUESTS" | translate
-            }}</a>
+            <a
+              class="footer_btn"
+              routerLink="/donation-requests"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >{{ "DONATION_REQUESTS" | translate }}</a
+            >
           </li>
           <li data-aos="fade-down" data-aos-delay="450">
-            <a class="footer_btn" href="#">{{ "SEARCH_DONORS" | translate }}</a>
+            <a
+              class="footer_btn"
+              routerLink="/campaigns"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >{{ "CAMPAIGNS" | translate }}</a
+            >
           </li>
           <li data-aos="fade-down" data-aos-delay="500">
-            <a class="footer_btn" href="#">{{ "ABOUT_US" | translate }}</a>
+            <a class="footer_btn" routerLink="/" fragment="about-us">{{
+              "ABOUT_US" | translate
+            }}</a>
           </li>
         </ul>
       </div>
@@ -47,15 +59,14 @@
         </h4>
         <ul class="list-unstyled">
           <li data-aos="fade-down" data-aos-delay="350">
-            <a class="footer_btn" href="#">{{
+            <a class="footer_btn" routerLink="/privacy-policy">{{
               "Privacy_Policy" | translate
             }}</a>
           </li>
           <li data-aos="fade-down" data-aos-delay="400">
-            <a class="footer_btn" href="#">{{ "Terms_of_Use" | translate }}</a>
-          </li>
-          <li data-aos="fade-down" data-aos-delay="450">
-            <a class="footer_btn" href="#">{{ "ABOUT_US" | translate }}</a>
+            <a class="footer_btn" routerLink="/terms-and-conditions">{{
+              "Terms_of_Use" | translate
+            }}</a>
           </li>
         </ul>
       </div>
