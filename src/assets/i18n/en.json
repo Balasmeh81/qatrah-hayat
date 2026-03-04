@@ -14,6 +14,7 @@
   "aboutUs_footer": "Every drop of blood makes a difference. Join us in our mission to provide a better life for all and ensure that blood reaches those in need at every moment.",
   "QUICK_LINKS": "Quick Links",
   "Support": "Support",
+  "Legal_Links":"Legal Links",
   "Privacy_Policy": "Privacy Policy",
   "Terms_of_Use": "Terms and Conditions",
   "footer_phone": "+(962) 7880299043",
@@ -149,5 +150,125 @@
   "Forget_Password": "Forgot Password?",
 
   "Shared-Keys": "Shared-Keys",
-  "VIEW_ALL": "View All"
+  "VIEW_ALL": "View All",
+
+  "Privacy-Keys": "Privacy-Keys",
+
+  "PRIVACY_TITLE": "Privacy Policy",
+  "PRIVACY_DESC": "This policy explains what data we collect, how we use it, and the choices you have when using Qatrah Hayat.",
+  "PRIVACY_LAST_UPDATED": "Last updated",
+  "PRIVACY_TOC": "On this page",
+  "PRIVACY_BACK_TO_TOP": "Back to top",
+
+  "PRIVACY_SEC_OVERVIEW": "Overview",
+  "PRIVACY_OVERVIEW_P1": "Qatrah Hayat connects blood donors and people in need with blood bank branches through an organized workflow.",
+  "PRIVACY_OVERVIEW_P2": "We collect only the data needed to operate the platform and provide a safer, clearer experience.",
+
+  "PRIVACY_SEC_DATA": "Data we collect",
+  "PRIVACY_DATA_1": "Account information: name, email, and login credentials (passwords are stored securely).",
+  "PRIVACY_DATA_2": "Blood-related info: blood type and donation/request history (as applicable).",
+  "PRIVACY_DATA_3": "Request details: blood type, units needed, and request status.",
+  "PRIVACY_DATA_4": "Technical data: basic logs for troubleshooting and security.",
+  "PRIVACY_NO_LOCATION_TITLE": "Location:",
+  "PRIVACY_NO_LOCATION_DESC": "We do not request or store your device location.",
+
+  "PRIVACY_SEC_USE": "How we use data",
+  "PRIVACY_USE_1": "To create accounts and enable secure login.",
+  "PRIVACY_USE_2": "To manage blood requests and donation records.",
+  "PRIVACY_USE_3": "To provide tracking and status updates for requests.",
+  "PRIVACY_USE_4": "To improve platform performance and prevent abuse.",
+
+  "PRIVACY_SEC_EMAIL": "Email notifications",
+  "PRIVACY_EMAIL_P1": "We may send email notifications related to account security and important updates.",
+  "PRIVACY_EMAIL_P2": "You can manage notification preferences where available.",
+
+  "PRIVACY_SEC_SHARING": "Sharing your data",
+  "PRIVACY_SHARING_1": "Data may be accessed by authorized blood bank branch staff for processing requests and donations.",
+  "PRIVACY_SHARING_2": "Administrative users (e.g., Ministry dashboard) may view aggregated reports and operational data based on permissions.",
+  "PRIVACY_SHARING_3": "Service providers (hosting/email delivery) may process limited data to operate the platform.",
+  "PRIVACY_NO_SELL": "We do not sell your personal data.",
+
+  "PRIVACY_SEC_SECURITY": "Security measures",
+  "PRIVACY_SECURITY_1": "Role-based access control (User/Staff/Manager/Admin).",
+  "PRIVACY_SECURITY_2": "Secure storage and limited access to sensitive data.",
+  "PRIVACY_SECURITY_3": "Password protection and standard security practices.",
+
+  "PRIVACY_SEC_RETENTION": "Data retention",
+  "PRIVACY_RETENTION_1": "We retain account data while your account is active and as needed to operate the platform.",
+  "PRIVACY_RETENTION_2": "We may retain certain records for a reasonable period for auditing and operational needs.",
+
+  "PRIVACY_SEC_RIGHTS": "Your rights",
+  "PRIVACY_RIGHTS_1": "Access and update your profile information.",
+  "PRIVACY_RIGHTS_2": "Request a copy of your data where applicable.",
+  "PRIVACY_RIGHTS_3": "Disable certain emails where available.",
+  "PRIVACY_DELETE_ACCOUNT": "You can request to delete your account.",
+
+  "PRIVACY_SEC_CHILDREN": "Children's privacy",
+  "PRIVACY_CHILDREN_P1": "The platform is not intended for children without appropriate eligibility and consent requirements.",
+
+  "PRIVACY_SEC_CHANGES": "Changes to this policy",
+  "PRIVACY_CHANGES_P1": "We may update this policy from time to time. We will publish the latest version on this page.",
+
+  "PRIVACY_SEC_CONTACT": "Contact us",
+  "PRIVACY_CONTACT_P1": "If you have questions about this Privacy Policy, contact us through the support channels.",
+  "PRIVACY_CONTACT_P2": "Email: support@qatrahhayat.com",
+
+  "Terms-Keys": "Terms-Keys",
+  "TERMS_TITLE": "Terms & Conditions",
+  "TERMS_DESC": "These terms govern your use of Qatrah Hayat. Please read them carefully before using the platform.",
+  "TERMS_LAST_UPDATED": "Last updated",
+  "TERMS_TOC": "On this page",
+  "TERMS_BACK_TO_TOP": "Back to top",
+
+  "TERMS_SEC_OVERVIEW": "Overview",
+  "TERMS_OVERVIEW_P1": "Qatrah Hayat provides tools to manage blood donation and blood requests through organized workflows.",
+  "TERMS_OVERVIEW_P2": "By using the platform, you agree to these Terms and any related policies.",
+
+  "TERMS_SEC_ACCEPT": "Acceptance of terms",
+  "TERMS_ACCEPT_P1": "By accessing or using Qatrah Hayat, you agree to comply with these Terms. If you do not agree, please do not use the platform.",
+
+  "TERMS_SEC_ELIGIBILITY": "Eligibility",
+  "TERMS_ELIG_1": "You must provide accurate information when creating an account.",
+  "TERMS_ELIG_2": "Donation eligibility depends on approved medical rules and time intervals.",
+  "TERMS_ELIG_3": "Certain services may require verification by authorized staff.",
+
+  "TERMS_SEC_ACCOUNTS": "Accounts & security",
+  "TERMS_ACC_1": "You are responsible for protecting your login credentials.",
+  "TERMS_ACC_2": "You must keep your profile information up to date.",
+  "TERMS_ACC_3": "We may suspend accounts involved in misuse or fraudulent activity.",
+
+  "TERMS_SEC_REQUESTS": "Blood requests & donations",
+  "TERMS_REQ_1": "Requests must be submitted with accurate blood type and required units.",
+  "TERMS_REQ_2": "The platform does not guarantee availability of blood units.",
+  "TERMS_REQ_3": "Authorized staff may validate, update, or close requests based on operational needs.",
+
+  "TERMS_SEC_NOTIFICATIONS": "Email notifications",
+  "TERMS_NOTIF_P1": "We may send email notifications related to account security, request updates, or important service notices.",
+
+  "TERMS_SEC_USER_RESP": "User responsibilities",
+  "TERMS_RESP_1": "Use the platform respectfully and provide truthful information.",
+  "TERMS_RESP_2": "Do not impersonate others or submit misleading requests.",
+  "TERMS_RESP_3": "Follow guidance and instructions provided by authorized staff.",
+
+  "TERMS_SEC_PROHIBITED": "Prohibited use",
+  "TERMS_PROH_1": "Attempting to breach security or access data without authorization.",
+  "TERMS_PROH_2": "Using the platform for illegal purposes or harassment.",
+  "TERMS_PROH_3": "Uploading harmful or malicious content.",
+
+  "TERMS_SEC_DISCLAIMER": "Disclaimer",
+  "TERMS_DISC_1": "The platform is an information and workflow tool, not medical advice.",
+  "TERMS_DISC_2": "Always consult medical professionals regarding donation suitability.",
+  "TERMS_DISC_3": "We are not liable for outcomes arising from inaccurate user-submitted data.",
+
+  "TERMS_SEC_AVAILABILITY": "Service availability",
+  "TERMS_AVAIL_P1": "We aim to keep the service available, but interruptions may occur due to maintenance or technical issues.",
+
+  "TERMS_SEC_CHANGES": "Changes to terms",
+  "TERMS_CHANGES_P1": "We may update these Terms from time to time. Continued use indicates acceptance of the updated Terms.",
+
+  "TERMS_SEC_CONTACT": "Contact",
+  "TERMS_CONTACT_P1": "For questions about these Terms, contact support via the official channels."
+
+
+
 }
