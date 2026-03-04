@@ -95,28 +95,3 @@ html {
 .main-container {
   background: linear-gradient(180deg, rgb(247, 235, 235), rgba(0, 0, 0, 0));
 }
-
-/* auth style */
-.auth-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--surface-card);
-  border-radius: 1.5rem;
-  padding: 3rem;
-  box-shadow: var(--box-shadow);
-  width: 100%;
-  max-width: 600px;
-}
-
-.container-heading {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-}
-
-.container-heading-text {
-  color: var(--primary-color-text);
-  font-size: 1.5rem;
-  text-align: center;
-}

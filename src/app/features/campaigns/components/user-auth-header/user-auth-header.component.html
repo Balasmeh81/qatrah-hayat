@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- LEFT : Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img
+        data-aos="zoom-in-left"
+        data-aos-delay="150"
+        src="{{
+          langService.currentLang == 'en'
+            ? 'assets/images/Qatrah_Hayat_logo.svg'
+            : 'assets/images/Qatrah_Hayat_logo_ar.svg'
+        }}"
+        alt="Logo"
+        width="125"
+        class="me-2"
+      />
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Nav Links (Center on Desktop) -->
+      <ul class="navbar-nav mx-auto text-center">
+        <!-- Buttons as Nav Items -->
+        <li
+          class="nav-item d-lg-none mb-2 mt-2"
+          data-aos="zoom-in-left"
+          data-aos-delay="550"
+        >
+          <button class="btn login-btn" routerLink="/user-auth/login">
+            {{ "LOGIN" | translate }}
+          </button>
+        </li>
+
+        <li
+          class="nav-item d-lg-none mb-2"
+          data-aos="zoom-in-left"
+          data-aos-delay="600"
+        >
+          <button class="btn signup-btn" routerLink="/user-auth/signup">
+            {{ "SIGN_UP" | translate }}
+          </button>
+        </li>
+
+        <li
+          class="nav-item d-lg-none"
+          data-aos="zoom-in-left"
+          data-aos-delay="650"
+        >
+          <button class="btn lang-btn" (click)="toggleLanguage()">
+            <div class="fas fa-globe">
+              <span class="lang-letter">{{
+                langService.currentLang === "en" ? "ar" : "en"
+              }}</span>
+            </div>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Desktop Buttons -->
+      <div class="d-none d-lg-flex gap-2">
+        <button
+          routerLink="/user-auth/login"
+          class="btn login-btn"
+          data-aos="zoom-in-right"
+          data-aos-delay="600"
+        >
+          {{ "LOGIN" | translate }}
+        </button>
+        <button
+          routerLink="/user-auth/signup"
+          class="btn signup-btn"
+          data-aos="zoom-in-right"
+          data-aos-delay="750"
+        >
+          {{ "SIGN_UP" | translate }}
+        </button>
+        <button
+          class="btn lang-btn"
+          data-aos="zoom-in-left"
+          data-aos-delay="900"
+          (click)="toggleLanguage()"
+        >
+          <div class="fas fa-globe">
+            <span class="lang-letter">{{
+              langService.currentLang === "en" ? "ar" : "en"
+            }}</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
