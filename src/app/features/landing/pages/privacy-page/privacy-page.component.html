@@ -1,1 +1,242 @@
-<p>privacy-page works!</p>
+<section class="privacy-hero">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center" data-aos="fade-up">
+        <h1 class="privacy-title mb-2">{{ 'PRIVACY_TITLE' | translate }}</h1>
+        <p class="privacy-sub mb-0">
+          {{ 'PRIVACY_DESC' | translate }}
+        </p>
+
+        <div class="mt-3">
+          <span class="badge privacy-badge">
+            {{ 'PRIVACY_LAST_UPDATED' | translate }}: {{ lastUpdated }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="privacy-body">
+  <div class="container py-5">
+    <div class="row g-4 align-items-start">
+      <!-- TOC -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="toc-card p-3 p-md-4">
+          <h5 class="mb-3">{{ 'PRIVACY_TOC' | translate }}</h5>
+
+          <div class="list-group list-group-flush">
+            <button
+              *ngFor="let item of toc"
+              type="button"
+              class="list-group-item list-group-item-action toc-item"
+              (click)="scrollTo(item.id)"
+            >
+              {{ item.titleKey | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="accordion qh-accordion" id="privacyAcc">
+          <!-- Overview -->
+          <div class="accordion-item" id="privacy-overview">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+                {{ 'PRIVACY_SEC_OVERVIEW' | translate }}
+              </button>
+            </h2>
+            <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <p class="mb-2">{{ 'PRIVACY_OVERVIEW_P1' | translate }}</p>
+                <p class="mb-0">{{ 'PRIVACY_OVERVIEW_P2' | translate }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data we collect -->
+          <div class="accordion-item" id="privacy-data">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+                {{ 'PRIVACY_SEC_DATA' | translate }}
+              </button>
+            </h2>
+            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <ul class="mb-2">
+                  <li>{{ 'PRIVACY_DATA_1' | translate }}</li>
+                  <li>{{ 'PRIVACY_DATA_2' | translate }}</li>
+                  <li>{{ 'PRIVACY_DATA_3' | translate }}</li>
+                  <li>{{ 'PRIVACY_DATA_4' | translate }}</li>
+                </ul>
+                <p class="mb-0">
+                  <strong>{{ 'PRIVACY_NO_LOCATION_TITLE' | translate }}</strong>
+                  {{ 'PRIVACY_NO_LOCATION_DESC' | translate }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- How we use -->
+          <div class="accordion-item" id="privacy-use">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3">
+                {{ 'PRIVACY_SEC_USE' | translate }}
+              </button>
+            </h2>
+            <div id="p3" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <ul class="mb-0">
+                  <li>{{ 'PRIVACY_USE_1' | translate }}</li>
+                  <li>{{ 'PRIVACY_USE_2' | translate }}</li>
+                  <li>{{ 'PRIVACY_USE_3' | translate }}</li>
+                  <li>{{ 'PRIVACY_USE_4' | translate }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email notifications -->
+          <div class="accordion-item" id="privacy-email">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p4">
+                {{ 'PRIVACY_SEC_EMAIL' | translate }}
+              </button>
+            </h2>
+            <div id="p4" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <p class="mb-2">{{ 'PRIVACY_EMAIL_P1' | translate }}</p>
+                <p class="mb-0">{{ 'PRIVACY_EMAIL_P2' | translate }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sharing -->
+          <div class="accordion-item" id="privacy-sharing">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p5">
+                {{ 'PRIVACY_SEC_SHARING' | translate }}
+              </button>
+            </h2>
+            <div id="p5" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <ul class="mb-2">
+                  <li>{{ 'PRIVACY_SHARING_1' | translate }}</li>
+                  <li>{{ 'PRIVACY_SHARING_2' | translate }}</li>
+                  <li>{{ 'PRIVACY_SHARING_3' | translate }}</li>
+                </ul>
+                <p class="mb-0"><strong>{{ 'PRIVACY_NO_SELL' | translate }}</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="accordion-item" id="privacy-security">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p6">
+                {{ 'PRIVACY_SEC_SECURITY' | translate }}
+              </button>
+            </h2>
+            <div id="p6" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <ul class="mb-0">
+                  <li>{{ 'PRIVACY_SECURITY_1' | translate }}</li>
+                  <li>{{ 'PRIVACY_SECURITY_2' | translate }}</li>
+                  <li>{{ 'PRIVACY_SECURITY_3' | translate }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Retention -->
+          <div class="accordion-item" id="privacy-retention">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p7">
+                {{ 'PRIVACY_SEC_RETENTION' | translate }}
+              </button>
+            </h2>
+            <div id="p7" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <ul class="mb-0">
+                  <li>{{ 'PRIVACY_RETENTION_1' | translate }}</li>
+                  <li>{{ 'PRIVACY_RETENTION_2' | translate }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rights -->
+          <div class="accordion-item" id="privacy-rights">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p8">
+                {{ 'PRIVACY_SEC_RIGHTS' | translate }}
+              </button>
+            </h2>
+            <div id="p8" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <ul class="mb-0">
+                  <li>{{ 'PRIVACY_RIGHTS_1' | translate }}</li>
+                  <li>{{ 'PRIVACY_RIGHTS_2' | translate }}</li>
+                  <li>{{ 'PRIVACY_RIGHTS_3' | translate }}</li>
+                  <li><strong>{{ 'PRIVACY_DELETE_ACCOUNT' | translate }}</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Children -->
+          <div class="accordion-item" id="privacy-children">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p9">
+                {{ 'PRIVACY_SEC_CHILDREN' | translate }}
+              </button>
+            </h2>
+            <div id="p9" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <p class="mb-0">{{ 'PRIVACY_CHILDREN_P1' | translate }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Changes -->
+          <div class="accordion-item" id="privacy-changes">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p10">
+                {{ 'PRIVACY_SEC_CHANGES' | translate }}
+              </button>
+            </h2>
+            <div id="p10" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <p class="mb-0">{{ 'PRIVACY_CHANGES_P1' | translate }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="accordion-item" id="privacy-contact">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p11">
+                {{ 'PRIVACY_SEC_CONTACT' | translate }}
+              </button>
+            </h2>
+            <div id="p11" class="accordion-collapse collapse" data-bs-parent="#privacyAcc">
+              <div class="accordion-body">
+                <p class="mb-2">{{ 'PRIVACY_CONTACT_P1' | translate }}</p>
+                <p class="mb-0">{{ 'PRIVACY_CONTACT_P2' | translate }}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-4 text-center pt-3 btn-back-to-top">
+          <a class="btn-qh-secondary px-4 py-2" href="#top" (click)="$event.preventDefault(); scrollTo('privacy-overview')">
+            {{ 'PRIVACY_BACK_TO_TOP' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

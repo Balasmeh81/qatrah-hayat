@@ -1,0 +1,110 @@
+/* Anchors spacing (if you have fixed header) */
+#privacy-overview,
+#privacy-data,
+#privacy-use,
+#privacy-email,
+#privacy-sharing,
+#privacy-security,
+#privacy-retention,
+#privacy-rights,
+#privacy-children,
+#privacy-changes,
+#privacy-contact {
+  scroll-margin-top: 90px;
+}
+
+.privacy-hero{
+  background: linear-gradient(135deg, rgba(191,0,7,.10), rgba(16,23,39,.08));
+  color: #101727;
+}
+
+.privacy-title{
+  font-weight: 900;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.privacy-sub{
+  color: rgba(0,0,0,.7);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.privacy-badge{
+  background: rgba(16,23,39,.92);
+  color: #fff;
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.toc-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 90px;
+}
+
+.toc-item{
+  border: 0;
+  padding: .7rem .2rem;
+  font-weight: 700;
+  color: rgba(0,0,0,.7);
+}
+
+.toc-item:hover{
+  color: var(--primary-color);
+  background: rgba(191,0,7,.06);
+}
+
+.qh-accordion .accordion-item{
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+/* Remove blue focus + highlight */
+.accordion-button:focus{
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed){
+  background: rgba(191,0,7,.06);
+  color: #101727;
+  box-shadow: none !important;
+  font-weight: 800;
+}
+
+/* RTL arrow to far right */
+:host-context([dir="rtl"]) .accordion-button{
+  text-align: right;
+  justify-content: space-between;
+}
+
+:host-context([dir="rtl"]) .accordion-button::after{
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Make arrow color close to #101727 when open */
+.accordion-button:not(.collapsed)::after{
+  filter: invert(100%) sepia(12%) saturate(766%) hue-rotate(190deg) brightness(27%) contrast(154%);
+}
+
+.accordion-collapse.show .accordion-body{
+  background: var(--surface-ground);
+}
+  .btn-back-to-top {
+    display:none;
+  }
+
+@media (max-width: 599px) {
+  .btn-back-to-top {
+    display:block;
+  }
+}
