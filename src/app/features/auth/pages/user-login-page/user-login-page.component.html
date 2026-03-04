@@ -1,1 +1,41 @@
-<p>user-login-page works!</p>
+<div
+  class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
+>
+  <div class="row">
+    <div class="col-12">
+      <div class="auth-container">
+        <!-- heading -->
+        <div class="container-heading">
+          <a class="d-flex align-items-center justify-content-center" href="#">
+            <img
+              data-aos="zoom-in-left"
+              data-aos-delay="150"
+              src="{{
+                langService.currentLang == 'en'
+                  ? 'assets/images/Qatrah_Hayat_logo_footer.svg'
+                  : 'assets/images/Qatrah_Hayat_logo_ar_footer.svg'
+              }}"
+              alt="Logo"
+              width="125"
+              class="me-2"
+            />
+          </a>
+          <h2 class="container-heading-title">
+            {{ "LOGIN_PAGE_TITLE" | translate }}
+          </h2>
+          <p class="container-heading-subtitle">
+            {{ "LOGIN_PAGE_SUBTITLE" | translate }}
+          </p>
+        </div>
+        <!-- form -->
+        <div class="form-container">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div>
+              <input type="number" name="" id="" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

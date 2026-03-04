@@ -1,18 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../../core/services/language.service';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-landing-header',
-  imports: [TranslateModule, CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './landing-header.component.html',
-  styleUrl: './landing-header.component.css'
+  selector: 'app-user-auth-header',
+  imports: [TranslateModule, CommonModule, RouterLink],
+  templateUrl: './user-auth-header.component.html',
+  styleUrl: './user-auth-header.component.css'
 })
-export class LandingHeaderComponent {
+export class UserAuthHeaderComponent {
   langService = inject(LanguageService);
-
   reload() {
     window.location.reload();
   }
@@ -22,5 +21,4 @@ export class LandingHeaderComponent {
     this.reload();
     this.langService.switchLanguage();
   }
-
 }
