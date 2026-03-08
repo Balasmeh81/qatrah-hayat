@@ -3,38 +3,20 @@
 >
   <div class="row">
     <div class="col-12">
-      <div class="auth-container">
+      <div class="auth-container" data-aos="fade-up" data-aos-delay="150">
         <!-- heading -->
-        <div class="container-heading">
-          <a class="d-flex align-items-center justify-content-center" href="#">
-            <img
-              data-aos="zoom-in-left"
-              data-aos-delay="150"
-              src="{{
-                langService.currentLang == 'en'
-                  ? 'assets/images/Qatrah_Hayat_logo_footer.svg'
-                  : 'assets/images/Qatrah_Hayat_logo_ar_footer.svg'
-              }}"
-              alt="Logo"
-              width="125"
-              class="me-2"
-            />
-          </a>
-          <h2 class="container-heading-title">
-            {{ "LOGIN_PAGE_TITLE" | translate }}
-          </h2>
-          <p class="container-heading-subtitle">
-            {{ "LOGIN_PAGE_SUBTITLE" | translate }}
-          </p>
-        </div>
+        <app-user-auth-container-heading
+          title="{{ 'LOGIN_PAGE_TITLE' | translate }}"
+          subtitle="{{ 'LOGIN_PAGE_SUBTITLE' | translate }}"
+        ></app-user-auth-container-heading>
         <!-- form -->
-        <div class="form-container">
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div>
-              <input type="number" name="" id="" />
-            </div>
-          </form>
-        </div>
+        <app-user-login-form></app-user-login-form>
+        <!-- footer -->
+        <app-user-auth-container-footer
+          text="{{ 'LOGIN_PAGE_FOOTER_TEXT' | translate }}"
+          linkText="{{ 'LOGIN_PAGE_FOOTER_LINK_TEXT' | translate }}"
+          linkUrl="/user-auth/signup"
+        ></app-user-auth-container-footer>
       </div>
     </div>
   </div>

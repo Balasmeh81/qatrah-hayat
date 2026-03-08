@@ -1,0 +1,9 @@
+/* form style */
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--surface-card);
+  border-radius: 1.5rem;
+}

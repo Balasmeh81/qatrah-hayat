@@ -1,0 +1,56 @@
+<div class="form-container py-4 px-2">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <!-- National ID Text Field -->
+    <app-text-field
+      [control]="nationalIdControl"
+      type="text"
+      placeholder="{{ 'National_ID_Placeholder' | translate }}"
+      prefixIcon="fas fa-id-card"
+      autocomplete="off"
+      inputId="nationalId"
+      maxLength="10"
+      [isNumeric]="true"
+    />
+    <!-- National ID Error Message -->
+    @if (nationalIdControl.touched || nationalIdControl.dirty) {
+      @if (nationalIdControl.hasError("required")) {
+        <app-form-error-message
+          [errorMessage]="'National_ID_IsRequired' | translate"
+        ></app-form-error-message>
+      } @else if (
+        nationalIdControl.hasError("minlength") ||
+        nationalIdControl.hasError("maxlength")
+      ) {
+        <app-form-error-message
+          [errorMessage]="'National_ID_Must_Be_10_Digits' | translate"
+        ></app-form-error-message>
+      }
+    }
+    <!-- Password Text Field -->
+    <app-password-text-field
+      [control]="passwordControl"
+      placeholder="{{ 'PasswordPlaceholder' | translate }}"
+      prefixIcon="fas fa-lock"
+      autocomplete="current-password"
+      inputId="password"
+    />
+    <!-- Password Error Message -->
+    @if (passwordControl.touched || passwordControl.dirty) {
+      @if (passwordControl.hasError("required")) {
+        <app-form-error-message
+          [errorMessage]="'PasswordIsRequired' | translate"
+        ></app-form-error-message>
+      }
+    }
+    <!-- Forget Password and Remember Me -->
+    <app-forget-password-and-remember-me />
+
+    <!-- Submit Button -->
+    <app-primary-button
+      label="{{ 'LOGIN' | translate }}"
+      type="submit"
+      [disabled]="isLoading"
+      [isLoading]="isLoading"
+    />
+  </form>
+</div>

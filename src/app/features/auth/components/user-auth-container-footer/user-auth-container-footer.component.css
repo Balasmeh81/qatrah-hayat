@@ -1,0 +1,19 @@
+.container-footer {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
+
+.container-footer-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.container-footer-link:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}

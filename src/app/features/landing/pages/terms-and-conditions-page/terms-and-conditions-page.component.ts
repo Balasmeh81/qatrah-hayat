@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { Collapse } from 'bootstrap';
 
@@ -13,12 +12,11 @@ interface TocItem {
 
 @Component({
   selector: 'app-terms-and-conditions-page',
-  imports: [CommonModule, TranslateModule, RouterLink],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './terms-and-conditions-page.component.html',
   styleUrl: './terms-and-conditions-page.component.css'
 })
-export class TermsAndConditionsPageComponent
-{
+export class TermsAndConditionsPageComponent {
   lastUpdated = '2026-03-04';
 
   toc: TocItem[] = [

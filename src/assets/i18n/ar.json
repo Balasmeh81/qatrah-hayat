@@ -143,13 +143,15 @@
 
   "LOGIN_PAGE_TITLE": "أهلاً مجدداً!",
   "LOGIN_PAGE_SUBTITLE":"سجّل الدخول واصنع فرقًا اليوم.",
-  "EmailPlaceholder": "البريد الإلكتروني...",
-  "EmailIsRequired": "البريد الإلكتروني مطلوب",
-  "EnterValidEmail": "أدخل عنوان بريد إلكتروني صالح",
+  "National_ID_Placeholder": "الرقم الوطني...",
+  "National_ID_IsRequired": "الرقم الوطني مطلوب",
+  "National_ID_Must_Be_10_Digits": "يجب أن يكون الرقم الوطني مكون من 10 أرقام",
   "PasswordPlaceholder": "كلمة المرور...",
   "PasswordIsRequired": "كلمة المرور مطلوبة",
   "Remember_Me": "تذكرني",
   "Forget_Password": "هل نسيت كلمة المرور؟",
+  "LOGIN_PAGE_FOOTER_TEXT": "ليس لديك حساب؟",
+  "LOGIN_PAGE_FOOTER_LINK_TEXT": "إنشاء حساب",
 
   "Shared-Keys":"Shared-Keys",
   "VIEW_ALL": "عرض الكل",
