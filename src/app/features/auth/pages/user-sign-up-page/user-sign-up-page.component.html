@@ -1,1 +1,23 @@
-<p>user-sign-up-page works!</p>
+<div
+  class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
+>
+  <div class="row">
+    <div class="col-12">
+      <div class="auth-container" data-aos="fade-up" data-aos-delay="150">
+        <!-- heading -->
+        <app-user-auth-container-heading
+          title="{{ 'SIGNUP_PAGE_TITLE' | translate }}"
+          subtitle="{{ 'SIGNUP_PAGE_SUBTITLE' | translate }}"
+        ></app-user-auth-container-heading>
+        <!-- form -->
+        <app-user-sign-up-form></app-user-sign-up-form>
+        <!-- footer -->
+        <app-user-auth-container-footer
+          text="{{ 'SIGNUP_PAGE_FOOTER_TEXT' | translate }}"
+          linkText="{{ 'SIGNUP_PAGE_FOOTER_LINK_TEXT' | translate }}"
+          linkUrl="/user-auth/login"
+        ></app-user-auth-container-footer>
+      </div>
+    </div>
+  </div>
+</div>

@@ -141,6 +141,8 @@
 
   "Auth-Keys":"Auth-Keys",
 
+  "LOGIN_KEYS":"LOGIN_KEYS",
+
   "LOGIN_PAGE_TITLE": "أهلاً مجدداً!",
   "LOGIN_PAGE_SUBTITLE":"سجّل الدخول واصنع فرقًا اليوم.",
   "National_ID_Placeholder": "الرقم الوطني...",
@@ -152,6 +154,13 @@
   "Forget_Password": "هل نسيت كلمة المرور؟",
   "LOGIN_PAGE_FOOTER_TEXT": "ليس لديك حساب؟",
   "LOGIN_PAGE_FOOTER_LINK_TEXT": "إنشاء حساب",
+
+  "SIGNUP_KEYS":"SIGNUP_KEYS",
+  "SIGNUP_PAGE_TITLE": "إنشاء حساب جديد",
+  "SIGNUP_PAGE_SUBTITLE": "إنشاء حساب جديد لبدء مشاركتك معنا.",
+
+  "SIGNUP_PAGE_FOOTER_TEXT": "لديك حساب بالفعل؟",
+  "SIGNUP_PAGE_FOOTER_LINK_TEXT": "تسجيل الدخول",
 
   "Shared-Keys":"Shared-Keys",
   "VIEW_ALL": "عرض الكل",
