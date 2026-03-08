@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from "../../shared/components/footer/footer.component";
 import { RouterOutlet } from '@angular/router';
-import { UserAuthHeaderComponent } from "../../features/campaigns/components/user-auth-header/user-auth-header.component";
+import { UserAuthHeaderComponent } from "../../features/auth/components/user-auth-header/user-auth-header.component";
 
 @Component({
   selector: 'app-user-auth-layout',

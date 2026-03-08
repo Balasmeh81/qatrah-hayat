@@ -1,0 +1,42 @@
+<div
+  class="form-inputs"
+  [class.focused]="isFocused"
+  [class.invalid-input]="isInvalid"
+  data-aos="fade-down"
+  data-aos-delay="300"
+>
+  @if (prefixIcon) {
+    <i
+      class="prefix-icon"
+      [class]="prefixIcon"
+      aria-hidden="true"
+      data-aos="fade-down"
+      data-aos-delay="350"
+    ></i>
+  } @else {
+    <span class="prefix-spacer" aria-hidden="true"></span>
+  }
+
+  <input
+    class="text-input"
+    [id]="inputId"
+    [type]="type"
+    [maxlength]="maxLength"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    [autocomplete]="autocomplete"
+    [readonly]="readonly"
+    [disabled]="disabled"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    (input)="onInput($event)"
+    data-aos="fade-down"
+    data-aos-delay="350"
+  />
+
+  @if (hasSuffix) {
+    <i class="suffix-icon" [class]="suffixIcon" aria-hidden="true"></i>
+  } @else {
+    <span class="suffix-spacer" aria-hidden="true"></span>
+  }
+</div>

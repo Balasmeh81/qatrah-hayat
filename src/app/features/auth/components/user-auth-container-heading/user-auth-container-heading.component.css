@@ -1,0 +1,26 @@
+.container-heading {
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.container-heading-title {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.container-heading-subtitle {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.container-heading-logo {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

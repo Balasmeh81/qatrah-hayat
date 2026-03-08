@@ -1,0 +1,13 @@
+<button
+  class="btn-qh-primary"
+  [type]="type"
+  [disabled]="disabled || isLoading"
+  data-aos="zoom-in"
+  data-aos-delay="600"
+>
+  @if (isLoading) {
+    <i class="fas fa-spinner fa-spin"></i> Loading...
+  } @else {
+    {{ label }}
+  }
+</button>
