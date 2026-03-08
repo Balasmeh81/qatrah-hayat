@@ -1,13 +1,29 @@
-<button
-  class="btn-qh-primary"
-  [type]="type"
-  [disabled]="disabled || isLoading"
-  data-aos="zoom-in"
-  data-aos-delay="600"
->
-  @if (isLoading) {
-    <i class="fas fa-spinner fa-spin"></i> Loading...
-  } @else {
-    {{ label }}
-  }
-</button>
+<div data-aos="zoom-in" data-aos-delay="600">
+  <button
+    class="btn-qh-primary"
+    [type]="type"
+    [disabled]="disabled || isLoading"
+  >
+    @if (isLoading) {
+      <!-- <i class="fas fa-spinner fa-spin loading-spinner"></i> -->
+      <span class="heartbeat-loader" aria-hidden="true">
+        <svg viewBox="0 0 120 60" class="heartbeat-svg">
+          <path
+            d="M5 35
+           H28
+           L42 35
+           L50 8
+           L61 52
+           L73 18
+           L82 40
+           L89 22
+           L96 35
+           H115"
+          />
+        </svg>
+      </span>
+    } @else {
+      {{ label }}
+    }
+  </button>
+</div>

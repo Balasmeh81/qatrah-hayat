@@ -7,3 +7,13 @@
   background-color: var(--surface-card);
   border-radius: 1.5rem;
 }
+
+.container-error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
