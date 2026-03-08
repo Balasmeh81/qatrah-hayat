@@ -146,7 +146,7 @@
   "National_ID_Must_Be_10_Digits": "National ID must be 10 digits",
   "PasswordPlaceholder": "Password...",
   "PasswordIsRequired": "Password is required",
-  "Remember_Me": "Remember Me",
+  "Remember_Me": "Remember Me?",
   "Forget_Password": "Forgot Password?",
   "LOGIN_PAGE_FOOTER_TEXT": "Don't have an account?",
   "LOGIN_PAGE_FOOTER_LINK_TEXT": "Create Account",
