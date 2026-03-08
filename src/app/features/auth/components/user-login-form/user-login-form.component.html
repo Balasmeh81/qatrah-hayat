@@ -50,10 +50,11 @@
       label="{{ 'LOGIN' | translate }}"
       type="submit"
       [disabled]="isLoading"
-      [isLoading]="true"
+      [isLoading]="isLoading"
     />
-    <div class="alert alert-danger container-error-message" role="alert">
+    <!-- Error Message -->
+    <!-- <div class="alert alert-danger container-error-message" role="alert">
       {{ "PasswordIsRequired" | translate }}
-    </div>
+    </div> -->
   </form>
 </div>

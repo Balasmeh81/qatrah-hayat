@@ -139,6 +139,8 @@
 
   "Auth-Keys": "Auth-Keys",
 
+  "LOGIN_KEYS": "LOGIN_KEYS",
+
   "LOGIN_PAGE_TITLE": "Welcome Back!",
   "LOGIN_PAGE_SUBTITLE": "Log in and make a difference today.",
   "National_ID_Placeholder": "National ID...",
@@ -150,6 +152,14 @@
   "Forget_Password": "Forgot Password?",
   "LOGIN_PAGE_FOOTER_TEXT": "Don't have an account?",
   "LOGIN_PAGE_FOOTER_LINK_TEXT": "Create Account",
+
+  "SIGNUP_KEYS": "SIGNUP_KEYS",
+
+  "SIGNUP_PAGE_TITLE": "Create Account",
+  "SIGNUP_PAGE_SUBTITLE": "Create an account to start your journey with us.",
+
+  "SIGNUP_PAGE_FOOTER_TEXT": "Already have an account?",
+  "SIGNUP_PAGE_FOOTER_LINK_TEXT": "Login",
 
   "Shared-Keys": "Shared-Keys",
   "VIEW_ALL": "View All",
