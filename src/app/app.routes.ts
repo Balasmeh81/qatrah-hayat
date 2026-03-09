@@ -54,6 +54,21 @@ export const routes: Routes = [
         loadComponent: () => import('./features/auth/pages/user-sign-up-page/user-sign-up-page.component')
           .then(c => c.UserSignUpPageComponent),
       },
+      {
+        path: 'reset-password',
+        loadComponent: () => import('./features/auth/pages/auth-reset-password-page/auth-reset-password-page.component')
+          .then(c => c.AuthResetPasswordPageComponent),
+      },
+      {
+        path: 'reset-password-confirmation',
+        loadComponent: () => import('./features/auth/pages/auth-otp-page/auth-otp-page.component')
+          .then(c => c.AuthOtpPageComponent),
+      },
+      {
+        path: 'new-password',
+        loadComponent: () => import('./features/auth/pages/auth-new-password-page/auth-new-password-page.component')
+          .then(c => c.AuthNewPasswordPageComponent),
+      }
     ],
   }
 

@@ -1,0 +1,16 @@
+<div class="otp-container">
+  <input
+    *ngFor="let item of inputs; let i = index"
+    #otpInput
+    type="text"
+    maxlength="1"
+    class="otp-box"
+    [class.focused]="focusedIndex === i"
+    [class.invalid-input]="isInvalid"
+    (focus)="onFocus(i)"
+    (blur)="onBlur()"
+    (input)="onInput($event, i)"
+    (keydown)="onKeyDown($event, i)"
+    (paste)="onPaste($event)"
+  />
+</div>

@@ -1,0 +1,53 @@
+<div
+  class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
+>
+  <div class="row">
+    <div class="col-12">
+      <div class="auth-container" data-aos="fade-up" data-aos-delay="150">
+        <!-- heading -->
+        <app-user-auth-container-heading
+          title="{{ 'OTP_PAGE_TITLE' | translate }}"
+          subtitle="{{ 'OTP_PAGE_SUBTITLE' | translate }}"
+        ></app-user-auth-container-heading>
+        <!-- form -->
+        <div class="form-container py-4 px-2">
+          <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+            <!-- OTP Text Field -->
+            <app-otp-input
+              [length]="6"
+              (otpChange)="onOtpChange($event)"
+              [isInvalid]="
+                otpControl.invalid && (otpControl.touched || otpControl.dirty)
+              "
+            >
+            </app-otp-input>
+            <!-- Error Message -->
+            @if (otpControl.touched || otpControl.dirty) {
+              @if (otpControl.hasError("required")) {
+                <app-form-error-message
+                  [errorMessage]="'OTP_IsRequired' | translate"
+                ></app-form-error-message>
+              } @else if (
+                otpControl.hasError("minlength") ||
+                otpControl.hasError("maxlength")
+              ) {
+                <app-form-error-message
+                  [errorMessage]="'OTP_Must_Be_6_Digits' | translate"
+                ></app-form-error-message>
+              }
+            }
+            <!-- Submit Button -->
+            <div class="mt-4">
+              <app-primary-button
+                label="{{ 'VERIFY_OTP' | translate }}"
+                type="submit"
+                [disabled]="isLoading"
+                [isLoading]="isLoading"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

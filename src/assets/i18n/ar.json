@@ -162,6 +162,31 @@
   "SIGNUP_PAGE_FOOTER_TEXT": "لديك حساب بالفعل؟",
   "SIGNUP_PAGE_FOOTER_LINK_TEXT": "تسجيل الدخول",
 
+  "RESET_PASSWORD_KEYS":"RESET_PASSWORD_KEYS",
+  "RESET_PASSWORD_PAGE_TITLE": "هل نسيت كلمة المرور؟",
+  "RESET_PASSWORD_PAGE_SUBTITLE": "أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك.",
+  "RESET_PASSWORD": "إعادة تعيين كلمة المرور",
+  "EmailPlaceholder": "البريد الإلكتروني...",
+  "EmailIsRequired": "البريد الإلكتروني مطلوب",
+  "InvalidEmail": "البريد الإلكتروني غير صالح",
+  "OTP_PAGE_KEYS":"OTP_PAGE_KEYS",
+  "OTP_PAGE_TITLE": "تأكيد البريد الإلكتروني",
+  "OTP_PAGE_SUBTITLE": "أدخل رمز التحقق المكون من 6 أرقام الذي تم إرساله إلى بريدك الإلكتروني.",
+  "OTP_IsRequired": "الرقم المكون من 6 أرقام مطلوب",
+  "OTP_Must_Be_6_Digits": "يجب أن يحتوي الرمز المكون من 6 أرقام",
+  "VERIFY_OTP": "تأكيد",
+  "NEW_PASSWORD_KEYS":"NEW_PASSWORD_KEYS",
+  "NEW_PASSWORD_PAGE_TITLE": "تعيين كلمة المرور الجديدة",
+  "NEW_PASSWORD_PAGE_SUBTITLE": "أدخل كلمة المرور الجديدة الخاصة بك.",
+  "SET_NEW_PASSWORD": "تعيين كلمة المرور الجديدة",
+  "PasswordStrengthError": "يجب أن تحتوي كلمة المرور على الأقل على 8 أحرف ورقم وحرف كبير وحرف صغير وحرف خاص",
+  "ConfirmPasswordPlaceholder": "تأكيد كلمة المرور...",
+  "ConfirmPasswordIsRequired": "تأكيد كلمة المرور مطلوب",
+  "PasswordsDoNotMatch": "كلمة المرور غير متطابقة",
+
+
+
+
   "Shared-Keys":"Shared-Keys",
   "VIEW_ALL": "عرض الكل",
 

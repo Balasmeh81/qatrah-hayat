@@ -161,6 +161,32 @@
   "SIGNUP_PAGE_FOOTER_TEXT": "Already have an account?",
   "SIGNUP_PAGE_FOOTER_LINK_TEXT": "Login",
 
+  "RESET_PASSWORD_KEYS": "RESET_PASSWORD_KEYS",
+
+  "RESET_PASSWORD_PAGE_TITLE": "Forgot Password?",
+  "RESET_PASSWORD_PAGE_SUBTITLE": "Enter your email to reset your password.",
+  "RESET_PASSWORD": "Reset Password",
+  "EmailPlaceholder": "Email...",
+  "EmailIsRequired": "Email is required",
+  "InvalidEmail": "Invalid email",
+
+  "OTP_PAGE_KEYS": "OTP_PAGE_KEYS",
+
+  "OTP_PAGE_TITLE": "Verify Your Email",
+  "OTP_PAGE_SUBTITLE": "Enter the 6-digit verification code sent to your email.",
+  "OTP_IsRequired": "OTP is required",
+  "OTP_Must_Be_6_Digits": "OTP must be 6 digits",
+  "VERIFY_OTP": "Verify",
+  "NEW_PASSWORD_KEYS": "NEW_PASSWORD_KEYS",
+
+  "NEW_PASSWORD_PAGE_TITLE": "Set New Password",
+  "NEW_PASSWORD_PAGE_SUBTITLE": "Enter your new password.",
+  "SET_NEW_PASSWORD": "Set New Password",
+  "PasswordStrengthError": "Password must be at least 8 characters long and contain at least one uppercase letter, one number, and one special character",
+  "ConfirmPasswordPlaceholder": "Confirm Password...",
+  "ConfirmPasswordIsRequired": "Confirm Password is required",
+  "PasswordsDoNotMatch": "Passwords do not match",
+
   "Shared-Keys": "Shared-Keys",
   "VIEW_ALL": "View All",
 

@@ -1,0 +1,14 @@
+/* auth style */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+@media (min-width: 577px) {
+  .auth-container {
+    width: 500px;
+  }
+}
