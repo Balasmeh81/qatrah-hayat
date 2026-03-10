@@ -3,11 +3,13 @@ import { TranslateService } from '@ngx-translate/core';
 
 type Lang = 'en' | 'ar';
 
+/* this section applies the language to the whole app */
 @Injectable({
   providedIn: 'root'
 })
-export class LanguageService {
 
+export class LanguageService {
+  /* this key is used to store the language in the local storage */
   private readonly key = 'lang';
   constructor(private translate: TranslateService) {
 
@@ -17,6 +19,7 @@ export class LanguageService {
       (localStorage.getItem(this.key) as Lang) ||
       (browserLang === 'ar' ? 'ar' : 'en');
 
+      /* sets the fallback language to english */
     this.translate.setFallbackLang('en');
     this.setLanguage(savedLang);
   }
