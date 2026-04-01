@@ -1,0 +1,41 @@
+<div class="marital-status-group" data-aos="fade-down" data-aos-delay="300">
+  <div class="radio-options">
+    <label
+      class="radio-card"
+      [class.selected]="selectedValue === 'single'"
+      for="maritalStatusSingle"
+    >
+      <input
+        type="radio"
+        id="maritalStatusSingle"
+        name="maritalStatus"
+        value="single"
+        [checked]="selectedValue === 'single'"
+        (change)="onSelectionChange('single')"
+      />
+      <span class="radio-custom"></span>
+      <span class="radio-text">
+        {{ "SINGLE" | translate }}
+      </span>
+    </label>
+
+    <label
+      class="radio-card"
+      [class.selected]="selectedValue === 'married'"
+      for="maritalStatusMarried"
+    >
+      <input
+        type="radio"
+        id="maritalStatusMarried"
+        name="maritalStatus"
+        value="married"
+        [checked]="selectedValue === 'married'"
+        (change)="onSelectionChange('married')"
+      />
+      <span class="radio-custom"></span>
+      <span class="radio-text">
+        {{ "MARRIED" | translate }}
+      </span>
+    </label>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div
+  class="form-inputs date-field"
+  [class.focused]="isFocused"
+  [class.invalid-input]="isInvalid"
+  data-aos="fade-down"
+  data-aos-delay="300"
+>
+  @if (prefixIcon) {
+    <i
+      class="prefix-icon"
+      [class]="prefixIcon"
+      aria-hidden="true"
+      data-aos="fade-down"
+      data-aos-delay="350"
+    ></i>
+  } @else {
+    <span class="prefix-spacer" aria-hidden="true"></span>
+  }
+
+  <input
+    #dateInput
+    class="text-input date-input"
+    [class.date-mode]="inputType === 'date'"
+    [id]="inputId"
+    [type]="inputType"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    [autocomplete]="autocomplete"
+    [readonly]="readonly"
+    [disabled]="disabled"
+    (focus)="onFocus(dateInput)"
+    (blur)="onBlur()"
+    data-aos="fade-down"
+    data-aos-delay="350"
+  />
+
+  <button
+    type="button"
+    class="suffix-btn"
+    aria-label="Open date picker"
+    [disabled]="disabled"
+    (click)="openDatePicker(dateInput)"
+    data-aos="fade-down"
+    data-aos-delay="450"
+  >
+    <i class="fas" [ngClass]="suffixIcon" aria-hidden="true"></i>
+  </button>
+</div>

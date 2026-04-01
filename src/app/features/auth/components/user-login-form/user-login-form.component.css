@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--surface-card);
-  border-radius: 1.5rem;
+
 }
 
 .container-error-message {
