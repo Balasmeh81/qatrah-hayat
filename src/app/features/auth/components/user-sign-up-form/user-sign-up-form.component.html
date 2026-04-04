@@ -1,7 +1,7 @@
-<div class="form-container py-4 px-4">
+<div class="form-container py-4 px-4 px-md-4">
   <form>
-    <div class="row">
-      <div class="col-9">
+    <div class="row g-3">
+      <div class="col-12 col-md-9">
         <!-- National ID Text Field -->
         <app-text-field
           [control]="nationalIdControl"
@@ -14,7 +14,7 @@
           [isNumeric]="true"
         />
       </div>
-      <div class="col-3">
+      <div class="col-12 col-md-3 mb-3">
         <!-- Search Button -->
         <app-primary-button
           label="{{ 'Bring_BTN' | translate }}"
@@ -24,8 +24,8 @@
         />
       </div>
     </div>
-    <div class="row">
-      <div class="col-6">
+    <div class="row g-3">
+      <div class="col-12 col-lg-6">
         <!-- Name Text Field Arabic -->
         <app-text-field
           [control]="fullNameArControl"
@@ -83,7 +83,7 @@
 
       <!--   col 2 -->
 
-      <div class="col-6">
+      <div class="col-12 col-lg-6">
         <!-- Name Text Field English -->
         <app-text-field
           [control]="fullNameEnControl"
