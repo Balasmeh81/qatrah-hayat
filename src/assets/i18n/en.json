@@ -157,6 +157,10 @@
 
   "SIGNUP_PAGE_TITLE": "Create Account",
   "SIGNUP_PAGE_SUBTITLE": "Create an account to start your journey with us.",
+    "National_Registry_Verification": "National Registry Verification",
+  "Personal_Information": "Personal Information",
+  "Security": "Account Security",
+  "Agreements": "Declarations and Agreements",
   "Bring_BTN": "Bring",
   "Full_Name_En_Placeholder": "Full Name (English)...",
   "Full_Name_Ar_Placeholder": "Full Name (Arabic)...",
@@ -165,6 +169,7 @@
   "GENDER_PLACEHOLDER": "Gender...",
   "SINGLE": "Single",
   "MARRIED": "Married",
+  "MaritalStatusIsRequired": "Marital status is required",
   "PHONE_PLACEHOLDER": "Phone Number...",
   "PHONE_IS_REQUIRED": "Phone number is required",
   "PHONE_MUST_BE_10_DIGITS": "Phone number must be 10 digits",
@@ -174,6 +179,9 @@
   "I_AGREE": "I agree to the",
   "TERMS": "Terms and Conditions",
   "I_CONFIRM": "I acknowledge and attest to the accuracy of all information entered.",
+  "YouMustAgreeToTerms": "You must agree to the Terms and Conditions",
+  "YouMustConfirm": "You must confirm the accuracy of all information entered",
+
   "SIGNUP_PAGE_FOOTER_TEXT": "Already have an account?",
   "SIGNUP_PAGE_FOOTER_LINK_TEXT": "Login",
 
@@ -321,8 +329,11 @@
   "TERMS_CHANGES_P1": "We may update these Terms from time to time. Continued use indicates acceptance of the updated Terms.",
 
   "TERMS_SEC_CONTACT": "Contact",
-  "TERMS_CONTACT_P1": "For questions about these Terms, contact support via the official channels."
+  "TERMS_CONTACT_P1": "For questions about these Terms, contact support via the official channels.",
 
-
+ "gender": {
+    "male": "Male",
+    "female": "Female"
+  }
 
 }

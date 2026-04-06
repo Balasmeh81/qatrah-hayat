@@ -158,6 +158,12 @@
   "SIGNUP_KEYS":"SIGNUP_KEYS",
   "SIGNUP_PAGE_TITLE": "إنشاء حساب جديد",
   "SIGNUP_PAGE_SUBTITLE": "إنشاء حساب جديد لبدء مشاركتك معنا.",
+
+  "National_Registry_Verification": "التحقق من بيانات السجل الوطني",
+  "Personal_Information": "البيانات الشخصية",
+  "Security": "أمان الحساب",
+  "Agreements": "الإقرارات والموافقات",
+
   "Bring_BTN": "احضار",
   "Full_Name_En_Placeholder": "الاسم الكامل (إنجليزي)...",
   "Full_Name_Ar_Placeholder": "الاسم الكامل (عربي)...",
@@ -166,6 +172,7 @@
   "GENDER_PLACEHOLDER": "الجنس...",
   "SINGLE": "أعزب",
   "MARRIED": "متزوج",
+  "MaritalStatusIsRequired": "الحالة الاجتماعية مطلوبة",
   "PHONE_PLACEHOLDER": "رقم الهاتف...",
   "PHONE_IS_REQUIRED": "رقم الهاتف مطلوب",
   "PHONE_MUST_BE_10_DIGITS": "رقم الهاتف يجب أن يكون مكون من 10 أرقام",
@@ -175,6 +182,8 @@
   "I_AGREE": "أوافق على",
   "TERMS_AND_PRIVACY": "الشروط والأحكام وسياسة الخصوصية",
   "I_CONFIRM":"أقر وأتعهد بصحة جميع المعلومات التي تم ادخالها",
+  "YouMustAgreeToTerms": "يجب أن توافق على الشروط والأحكام وسياسة الخصوصية",
+  "YouMustConfirm": "يجب أن تؤكد صحة جميع المعلومات التي تم إدخالها",
   "SIGNUP_PAGE_FOOTER_TEXT": "لديك حساب بالفعل؟",
   "SIGNUP_PAGE_FOOTER_LINK_TEXT": "تسجيل الدخول",
 
@@ -322,6 +331,12 @@
   "TERMS_CHANGES_P1": "قد نقوم بتحديث هذه الشروط من وقت لآخر. استمرارك باستخدام المنصة يعني موافقتك على التحديثات.",
 
   "TERMS_SEC_CONTACT": "التواصل",
-  "TERMS_CONTACT_P1": "للاستفسار حول الشروط والأحكام، يرجى التواصل عبر قنوات الدعم الرسمية."
+  "TERMS_CONTACT_P1": "للاستفسار حول الشروط والأحكام، يرجى التواصل عبر قنوات الدعم الرسمية.",
+
+
+    "gender": {
+    "male": "ذكر",
+    "female": "أنثى"
+  }
 
 }
