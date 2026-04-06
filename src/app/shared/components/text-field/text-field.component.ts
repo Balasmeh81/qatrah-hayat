@@ -21,6 +21,7 @@ export class TextFieldComponent {
   @Input() disabled: boolean = false;
   @Input() inputId: string = '';
   @Input() isNumeric: boolean = false;
+  @Input() value: string = '';
   isFocused = false;
   get hasSuffix(): boolean {
     return !!this.suffixIcon;

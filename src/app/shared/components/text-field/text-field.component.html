@@ -19,6 +19,7 @@
 
   <input
     class="text-input"
+    [value]="value"
     [id]="inputId"
     [type]="type"
     [maxlength]="maxLength"
@@ -27,7 +28,7 @@
     [autocomplete]="autocomplete"
     [readonly]="readonly"
     [disabled]="disabled"
-    (focus)="onFocus()"
+    (focus)="readonly ? null : onFocus()"
     (blur)="onBlur()"
     (input)="onInput($event)"
     data-aos="fade-down"
