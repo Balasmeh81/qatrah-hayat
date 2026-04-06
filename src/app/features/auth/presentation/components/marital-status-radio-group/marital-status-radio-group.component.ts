@@ -11,9 +11,9 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './marital-status-radio-group.component.css'
 })
 export class MaritalStatusRadioGroupComponent {
-  selectedValue: 'single' | 'married' | null = null;
+  selectedValue: number | null = null;
   @Input() control!: AbstractControl;
-  onSelectionChange(value: 'single' | 'married'): void {
+  onSelectionChange(value: number): void {
     this.selectedValue = value;
     this.control.setValue(value);
   }

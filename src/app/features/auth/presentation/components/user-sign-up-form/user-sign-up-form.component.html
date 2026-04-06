@@ -36,6 +36,11 @@
                 />
               }
             }
+            @if (civilStatusErrorMessage) {
+              <app-form-error-message
+                [errorMessage]="civilStatusErrorMessage"
+              />
+            }
           </div>
         </div>
 
@@ -44,9 +49,7 @@
             label="{{ 'Bring_BTN' | translate }}"
             type="button"
             (buttonClick)="onFetchCitizenData()"
-            [disabled]="
-              isFetchingCitizenData || signUpForm.controls.nationalId.invalid
-            "
+            [disabled]="isFetchingCitizenData"
             [isLoading]="isFetchingCitizenData"
           />
         </div>
@@ -107,7 +110,6 @@
         <div class="col-12 col-md-6">
           <app-text-field
             [control]="signUpForm.controls.genderDisplay"
-            [value]="signUpForm.controls.genderDisplay.value || ''"
             placeholder="{{ 'GENDER_PLACEHOLDER' | translate }}"
             type="text"
             prefixIcon="fas fa-venus-mars"
@@ -265,7 +267,8 @@
                   [errorMessage]="'ConfirmPasswordIsRequired' | translate"
                 />
               } @else if (
-                signUpForm.controls.confirmPassword.hasError("passwordMismatch")
+                signUpForm.hasError("passwordMismatch") &&
+                signUpForm.controls.confirmPassword.value
               ) {
                 <app-form-error-message
                   [errorMessage]="'PasswordsDoNotMatch' | translate"
@@ -323,10 +326,18 @@
     </div>
 
     <div class="submit-wrapper">
+      @if (serverErrorMessage) {
+        <app-form-error-message [errorMessage]="serverErrorMessage" />
+      }
+      @if (showSuccessMessage) {
+        <div class="alert alert-success mb-3" role="alert">
+          <strong>{{ "ACCOUNT_CREATED_SUCCESSFULLY" | translate }}:</strong>
+          {{ "YOU_CAN_LOGIN_NOW" | translate }}
+        </div>
+      }
       <app-primary-button
         label="{{ 'SIGN_UP' | translate }}"
         type="submit"
-        (buttonClick)="onSubmit()"
         [disabled]="isSubmitting"
         [isLoading]="isSubmitting"
       />

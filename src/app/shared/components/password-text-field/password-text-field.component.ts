@@ -15,7 +15,6 @@ export class PasswordTextFieldComponent {
   @Input() prefixIcon: string = 'fas fa-lock';
   @Input() autocomplete: string = 'current-password';
   @Input() readonly: boolean = false;
-  @Input() disabled: boolean = false;
   @Input() inputId: string = '';
 
   showPassword = false;

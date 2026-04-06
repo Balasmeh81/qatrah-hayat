@@ -18,7 +18,6 @@ export class TextFieldComponent {
   @Input() autocomplete: string = 'off';
   @Input() maxLength: string = '';
   @Input() readonly: boolean = false;
-  @Input() disabled: boolean = false;
   @Input() inputId: string = '';
   @Input() isNumeric: boolean = false;
   @Input() value: string = '';
