@@ -152,6 +152,10 @@
   "Forget_Password": "Forgot Password?",
   "LOGIN_PAGE_FOOTER_TEXT": "Don't have an account?",
   "LOGIN_PAGE_FOOTER_LINK_TEXT": "Create Account",
+  "invalidCredentials": "Invalid National ID or Password.",
+  "InactiveAccount": "This account is inactive. Please contact support.",
+  "Generic_Error_Login": "An error occurred while logging in. Please try again later.",
+
 
   "SIGNUP_KEYS": "SIGNUP_KEYS",
 
@@ -162,6 +166,8 @@
   "Security": "Account Security",
   "Agreements": "Declarations and Agreements",
   "Bring_BTN": "Bring",
+  "National_ID_Not_Found": "National registry data not found. Please check the entered number.",
+  "National_ID_Server_Error": "A server error occurred while fetching national registry data. Please try again later.",
   "Full_Name_En_Placeholder": "Full Name (English)...",
   "Full_Name_Ar_Placeholder": "Full Name (Arabic)...",
   "BLOOD_TYPE_PLACEHOLDER": "Blood Type...",
@@ -170,9 +176,9 @@
   "SINGLE": "Single",
   "MARRIED": "Married",
   "MaritalStatusIsRequired": "Marital status is required",
-  "PHONE_PLACEHOLDER": "Phone Number...",
+  "PHONE_PLACEHOLDER": "Phone Number, ex:07xxxxxxxx",
   "PHONE_IS_REQUIRED": "Phone number is required",
-  "PHONE_MUST_BE_10_DIGITS": "Phone number must be 10 digits",
+  "PHONE_MUST_BE_10_DIGITS": "Phone number must be 10 digits and start with 07",
   "ADDRESS_PLACEHOLDER": "Address...",
   "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm Password...",
   "JOB_PLACEHOLDER": "Job...",
@@ -182,8 +188,17 @@
   "YouMustAgreeToTerms": "You must agree to the Terms and Conditions",
   "YouMustConfirm": "You must confirm the accuracy of all information entered",
 
+  "ACCOUNT_CREATED_SUCCESSFULLY": "Your account has been created successfully.",
+  "YOU_CAN_LOGIN_NOW": "You can now log in using your credentials.",
+
+
   "SIGNUP_PAGE_FOOTER_TEXT": "Already have an account?",
   "SIGNUP_PAGE_FOOTER_LINK_TEXT": "Login",
+  "isCitizenVerifiedError": "You must verify your national registry data before submitting the form.",
+  "Only_Jordanian_citizens_can_register": "Only Jordanian citizens can register.",
+  "Email_is_already_registered": "Email is already registered.",
+  "National_ID_is_already_registered": "National ID is already registered.",
+  "Generic_Error_Signup": "An error occurred while creating the account. Please try again later.",
 
   "RESET_PASSWORD_KEYS": "RESET_PASSWORD_KEYS",
 

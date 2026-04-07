@@ -5,6 +5,7 @@ import { AuthResponseDto } from '../dots/auth-response.dto';
 import { RegisterRequestDto } from '../dots/register-request.dto';
 import { AuthTokenService } from './auth-token.service';
 import { API_ENDPOINTS } from '../../../../core/constants/api.constants';
+import { LoginRequestDto } from '../dots/login-request.dto';
 
 
 @Injectable({
@@ -22,6 +23,13 @@ export class AuthService {
     return this.api.post<RegisterRequestDto, AuthResponseDto>(
       this.registerUrl,
       request
+    );
+  }
+
+  login(request: LoginRequestDto): Observable<AuthResponseDto> {
+    return this.api.post<LoginRequestDto, AuthResponseDto>(
+      this.loginUrl,
+      request
     ).pipe(
       tap((response) => {
         this.tokenService.setToken(response.token);
@@ -29,11 +37,7 @@ export class AuthService {
     );
   }
 
-  login(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  getCurrentUser(): void {
+  getCurrentUser(): Observable<AuthResponseDto> {
     throw new Error('Method not implemented.');
   }
 

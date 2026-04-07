@@ -2,7 +2,7 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <!-- National ID Text Field -->
     <app-text-field
-      [control]="nationalIdControl"
+      [control]="loginForm.controls.nationalId"
       type="text"
       placeholder="{{ 'National_ID_Placeholder' | translate }}"
       prefixIcon="fas fa-id-card"
@@ -12,14 +12,17 @@
       [isNumeric]="true"
     />
     <!-- National ID Error Message -->
-    @if (nationalIdControl.touched || nationalIdControl.dirty) {
-      @if (nationalIdControl.hasError("required")) {
+    @if (
+      loginForm.controls.nationalId.touched ||
+      loginForm.controls.nationalId.dirty
+    ) {
+      @if (loginForm.controls.nationalId.hasError("required")) {
         <app-form-error-message
           [errorMessage]="'National_ID_IsRequired' | translate"
         ></app-form-error-message>
       } @else if (
-        nationalIdControl.hasError("minlength") ||
-        nationalIdControl.hasError("maxlength")
+        loginForm.controls.nationalId.hasError("minlength") ||
+        loginForm.controls.nationalId.hasError("maxlength")
       ) {
         <app-form-error-message
           [errorMessage]="'National_ID_Must_Be_10_Digits' | translate"
@@ -28,15 +31,17 @@
     }
     <!-- Password Text Field -->
     <app-password-text-field
-      [control]="passwordControl"
+      [control]="loginForm.controls.password"
       placeholder="{{ 'PasswordPlaceholder' | translate }}"
       prefixIcon="fas fa-lock"
       autocomplete="current-password"
       inputId="password"
     />
     <!-- Password Error Message -->
-    @if (passwordControl.touched || passwordControl.dirty) {
-      @if (passwordControl.hasError("required")) {
+    @if (
+      loginForm.controls.password.touched || loginForm.controls.password.dirty
+    ) {
+      @if (loginForm.controls.password.hasError("required")) {
         <app-form-error-message
           [errorMessage]="'PasswordIsRequired' | translate"
         ></app-form-error-message>
@@ -45,6 +50,10 @@
     <!-- Forget Password and Remember Me -->
     <app-forget-password-and-remember-me />
 
+    @if (serverErrorMessage) {
+      <app-form-error-message [errorMessage]="serverErrorMessage" />
+    }
+
     <!-- Submit Button -->
     <app-primary-button
       label="{{ 'LOGIN' | translate }}"
@@ -52,9 +61,5 @@
       [disabled]="isLoading"
       [isLoading]="isLoading"
     />
-    <!-- Error Message -->
-    <!-- <div class="alert alert-danger container-error-message" role="alert">
-      {{ "PasswordIsRequired" | translate }}
-    </div> -->
   </form>
 </div>

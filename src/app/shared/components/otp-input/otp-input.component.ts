@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class OtpInputComponent implements AfterViewInit {
   @Input() length = 6;
 
-  // 🔥 parent يحدد اذا في error
+  //  parent يحدد اذا في error
   @Input() isInvalid = false;
 
   @Output() otpChange = new EventEmitter<string>();

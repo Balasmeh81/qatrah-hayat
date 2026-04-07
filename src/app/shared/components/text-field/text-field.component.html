@@ -27,7 +27,6 @@
     [formControl]="control"
     [autocomplete]="autocomplete"
     [readonly]="readonly"
-    [disabled]="disabled"
     (focus)="readonly ? null : onFocus()"
     (blur)="onBlur()"
     (input)="onInput($event)"
