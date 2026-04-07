@@ -70,6 +70,12 @@ export const routes: Routes = [
           .then(c => c.AuthNewPasswordPageComponent),
       }
     ],
+  },
+  {
+    path: 'user',
+    loadComponent: () => import('./layouts/user-layout/user-layout.component')
+      .then(c => c.UserLayoutComponent),
+
   }
 
 ];

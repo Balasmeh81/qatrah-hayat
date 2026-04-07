@@ -5,10 +5,11 @@
   justify-content: center;
   border-radius: 1.5rem;
   box-shadow: var(--box-shadow);
+  background-color: var(--surface-card);
 }
 
 @media (min-width: 577px) {
   .auth-container {
-    width: 500px;
+    width: 600px;
   }
 }

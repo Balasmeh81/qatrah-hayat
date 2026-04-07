@@ -240,8 +240,6 @@ export class UserSignUpFormComponent {
     //Step 3: If valid, map the form values to the registration request format and call the auth service to submit the data
     const formValue = this.signUpForm.getRawValue() as SignUpFormValue;
     const request = mapSignUpFormToRegisterRequest(formValue);
-    console.log('maritalStatus value:', this.signUpForm.controls.maritalStatus.value);
-    console.log('Register request:', request);
     this.isSubmitting = true;
 
     this.authService.signUp(request)
@@ -271,7 +269,7 @@ export class UserSignUpFormComponent {
           } else if (error.message === 'National ID is already registered.') {
             this.serverErrorMessage = this.translate.instant('National_ID_is_already_registered');
           } else {
-            this.serverErrorMessage = this.translate.instant('Generic_Error');
+            this.serverErrorMessage = this.translate.instant('Generic_Error_Signup');
           }
           console.error('Register error:', error);
         }

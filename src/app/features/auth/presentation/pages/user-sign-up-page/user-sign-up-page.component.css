@@ -1,4 +1,6 @@
 /* auth style */
+
+
 .auth-container {
   display: flex;
   flex-direction: column;
@@ -6,4 +8,5 @@
   border-radius: 1.5rem;
   box-shadow: var(--box-shadow);
   margin: 30px;
+  background-color: var(--surface-card);
 }
