@@ -1,4 +1,4 @@
-import { GENDER_OPTIONS, GenderEnum } from "../../../features/auth/domain/enums/gender-enum";
+import { GENDER_OPTIONS, GenderEnum } from "../../../features/auth/data/enums/gender-enum";
 
 export function getGenderLabel(value: GenderEnum | null): string {
   if (value == null) return '';

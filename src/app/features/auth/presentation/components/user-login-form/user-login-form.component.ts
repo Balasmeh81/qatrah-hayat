@@ -6,14 +6,15 @@ import { FormErrorMessageComponent } from '../../../../../shared/components/form
 import { PasswordTextFieldComponent } from '../../../../../shared/components/password-text-field/password-text-field.component';
 import { TextFieldComponent } from '../../../../../shared/components/text-field/text-field.component';
 import { SharedForAuth } from '../../../../../shared/shared-imports/shared';
-import { LoginFormModel } from '../../../domain/models/login-form-model';
+import { LoginFormModel } from '../../../data/models/login-form.model';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { finalize, Subject, takeUntil } from 'rxjs';
 import { AuthService } from '../../../data/services/auth.service';
-import { LoginFormValueModel } from '../../../domain/models/login-form-value-model';
+import { LoginFormValueModel } from '../../../data/models/login-form-value-model';
 import { mapLoginFormToLoginRequest } from '../../../data/mapper/login.mapper';
 import { Failure } from '../../../../../core/errors/failure';
+import { ScreeningSessionType } from '../../../../screening/data/enums/screening-session-type.enum';
 
 @Component({
   selector: 'app-user-login-form',
@@ -74,6 +75,15 @@ export class UserLoginFormComponent {
         this.isLoading = false;
         console.log('Login response:', response);
         this.clearData();
+        if (!response.isProfileCompleted) {
+          this.router.navigate(['//user/screening'], {
+            queryParams: {
+              sessionType: ScreeningSessionType.Registration,
+              isForFemaleOnly: response.gender === 2
+            }
+          });
+          return;
+        }
         this.router.navigate(['/user']);
       },
       error: (error: Failure) => {

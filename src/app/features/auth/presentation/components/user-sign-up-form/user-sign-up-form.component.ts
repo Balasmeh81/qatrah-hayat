@@ -13,22 +13,22 @@ import { FormErrorMessageComponent } from '../../../../../shared/components/form
 import { PasswordTextFieldComponent } from '../../../../../shared/components/password-text-field/password-text-field.component';
 import { TextFieldComponent } from '../../../../../shared/components/text-field/text-field.component';
 import { SharedForAuth } from '../../../../../shared/shared-imports/shared';
-import { SignUpFormModel } from '../../../domain/models/signup-form-model';
+import { SignUpFormModel } from '../../../data/models/signup-form.model';
 import { AuthService } from '../../../data/services/auth.service';
 import { MaritalStatusRadioGroupComponent } from '../marital-status-radio-group/marital-status-radio-group.component';
-import { BloodTypeEnum } from '../../../domain/enums/blood-type-enum';
-import { GenderEnum } from '../../../domain/enums/gender-enum';
-import { MaritalStatusEnum } from '../../../domain/enums/marital-status-enum';
+import { BloodTypeEnum } from '../../../data/enums/blood-type-enum';
+import { GenderEnum } from '../../../data/enums/gender-enum';
+import { MaritalStatusEnum } from '../../../data/enums/marital-status-enum';
 import { Failure, NotFoundFailure } from '../../../../../core/errors/failure';
 import { mapSignUpFormToRegisterRequest } from '../../../data/mapper/register.mapper';
-import { SignUpFormValue } from '../../../domain/models/sign-up-form-value.model';
+import { SignUpFormValue } from '../../../data/models/sign-up-form-value.model';
 import { CitizenService } from '../../../data/services/citizen.service';
-import { CitizenResponseDto } from '../../../data/dots/citizen-response.dto';
 import { TranslateService } from '@ngx-translate/core';
 import { getBloodTypeLabel } from '../../../../../core/utils/helper/get.blood.type.label.helper';
 import { getGenderLabel } from '../../../../../core/utils/helper/get.gender.labe.helper';
 import { formatDateForInput } from '../../../../../core/utils/helper/format.date.for.input.helper';
 import { Router } from '@angular/router';
+import { CitizenResponseModel } from '../../../data/models/citizen-response.model';
 
 @Component({
   selector: 'app-user-sign-up-form',
@@ -170,7 +170,7 @@ export class UserSignUpFormComponent {
       )
       .subscribe({
         //Step 4: Handle success by filling the form and setting verification status
-        next: (response: CitizenResponseDto) => {
+        next: (response: CitizenResponseModel) => {
           this.fillCitizenData(response);
           this.isCitizenVerified = true;
         },
@@ -188,7 +188,7 @@ export class UserSignUpFormComponent {
 
   //Phase 2 In Registration part 1
   // Fill the form with citizen data retrieved from the service
-  private fillCitizenData(response: CitizenResponseDto): void {
+  private fillCitizenData(response: CitizenResponseModel): void {
     const bloodType = response.bloodType as BloodTypeEnum;
     const gender = response.gender as GenderEnum;
     this.signUpForm.patchValue({

@@ -1,4 +1,4 @@
-export interface RegisterRequestDto {
+export interface RegisterRequestModel {
   nationalId: string;
   fullNameAr: string;
   fullNameEn: string;
