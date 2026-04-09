@@ -1,10 +1,10 @@
-import { SignUpFormValue } from "../../domain/models/sign-up-form-value.model";
-import { RegisterRequestDto } from "../dots/register-request.dto";
+import { RegisterRequestModel } from "../models/register-request.model";
+import { SignUpFormValue } from "../models/sign-up-form-value.model";
 
 
 export function mapSignUpFormToRegisterRequest(
   formValue: SignUpFormValue
-): RegisterRequestDto {
+): RegisterRequestModel {
   return {
     nationalId: formValue.nationalId.trim(),
     fullNameAr: formValue.fullNameAr.trim(),

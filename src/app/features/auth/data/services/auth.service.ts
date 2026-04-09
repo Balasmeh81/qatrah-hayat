@@ -1,11 +1,11 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { ApiService } from '../../../../core/services/api.service';
-import { AuthResponseDto } from '../dots/auth-response.dto';
-import { RegisterRequestDto } from '../dots/register-request.dto';
 import { AuthTokenService } from './auth-token.service';
 import { API_ENDPOINTS } from '../../../../core/constants/api.constants';
-import { LoginRequestDto } from '../dots/login-request.dto';
+import { RegisterRequestModel } from '../models/register-request.model';
+import { AuthResponseModel } from '../models/auth-response.model';
+import { LoginRequestModel } from '../models/login-request.model';
 
 
 @Injectable({
@@ -19,15 +19,15 @@ export class AuthService {
   private readonly loginUrl = API_ENDPOINTS.auth.login;
   private readonly currentUserUrl = API_ENDPOINTS.auth.me;
 
-  signUp(request: RegisterRequestDto): Observable<AuthResponseDto> {
-    return this.api.post<RegisterRequestDto, AuthResponseDto>(
+  signUp(request: RegisterRequestModel): Observable<AuthResponseModel> {
+    return this.api.post<RegisterRequestModel, AuthResponseModel>(
       this.registerUrl,
       request
     );
   }
 
-  login(request: LoginRequestDto): Observable<AuthResponseDto> {
-    return this.api.post<LoginRequestDto, AuthResponseDto>(
+  login(request: LoginRequestModel): Observable<AuthResponseModel> {
+    return this.api.post<LoginRequestModel, AuthResponseModel>(
       this.loginUrl,
       request
     ).pipe(
@@ -37,7 +37,7 @@ export class AuthService {
     );
   }
 
-  getCurrentUser(): Observable<AuthResponseDto> {
+  getCurrentUser(): Observable<AuthResponseModel> {
     throw new Error('Method not implemented.');
   }
 

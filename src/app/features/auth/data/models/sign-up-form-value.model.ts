@@ -1,6 +1,6 @@
-import { BloodTypeEnum } from '../../domain/enums/blood-type-enum';
-import { GenderEnum } from '../../domain/enums/gender-enum';
-import { MaritalStatusEnum } from '../../domain/enums/marital-status-enum';
+import { BloodTypeEnum } from '../enums/blood-type-enum';
+import { GenderEnum } from '../enums/gender-enum';
+import { MaritalStatusEnum } from '../enums/marital-status-enum';
 
 export interface SignUpFormValue {
   nationalId: string;

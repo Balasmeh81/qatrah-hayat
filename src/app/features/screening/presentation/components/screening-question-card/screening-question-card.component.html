@@ -1,0 +1,83 @@
+<div class="card shadow-sm border-0" [formGroup]="group">
+  <div class="card-body">
+    <h5 class="card-title mb-3">
+      {{ question.displayOrder }}. {{ question.textAr }}
+    </h5>
+
+    <p class="text-muted mb-3">{{ question.textEn }}</p>
+
+    <div class="d-flex gap-4 mb-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          [id]="'yes-' + question.id"
+          [value]="true"
+          formControlName="answer"
+        />
+        <label class="form-check-label" [for]="'yes-' + question.id">
+          نعم / Yes
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          [id]="'no-' + question.id"
+          [value]="false"
+          formControlName="answer"
+        />
+        <label class="form-check-label" [for]="'no-' + question.id">
+          لا / No
+        </label>
+      </div>
+    </div>
+
+    @if (
+      group.get("answer")?.value === true && question.requiresAdditionalText
+    ) {
+      <div class="mb-3">
+        <label class="form-label">
+          {{ question.additionalTextLabelAr || "معلومة إضافية" }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="additionalText"
+        />
+      </div>
+    }
+
+    @if (group.get("answer")?.value === true && question.requiresDateValue) {
+      <div class="mb-3">
+        <label class="form-label">
+          {{ question.conditionalDateLabelAr || "التاريخ" }}
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          formControlName="conditionalDateValue"
+        />
+      </div>
+    }
+
+    @if (group.get("answer")?.touched && group.get("answer")?.invalid) {
+      <div class="text-danger small">يجب اختيار نعم أو لا</div>
+    }
+
+    @if (
+      group.get("additionalText")?.touched &&
+      group.get("additionalText")?.invalid
+    ) {
+      <div class="text-danger small">هذا الحقل مطلوب</div>
+    }
+
+    @if (
+      group.get("conditionalDateValue")?.touched &&
+      group.get("conditionalDateValue")?.invalid
+    ) {
+      <div class="text-danger small">التاريخ مطلوب</div>
+    }
+  </div>
+</div>

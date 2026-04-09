@@ -1,0 +1,36 @@
+<div class="screening-page container py-4">
+  <h2 class="mb-3">Screening Questions</h2>
+
+  @if (isLoading()) {
+    <div class="alert alert-info">Loading questions...</div>
+  }
+
+  @if (errorMessage()) {
+    <div class="alert alert-danger">
+      {{ errorMessage() }}
+    </div>
+  }
+
+  @if (!isLoading() && form) {
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div formArrayName="answers" class="d-flex flex-column gap-3">
+        @for (question of questions(); track question.id; let i = $index) {
+          <app-screening-question-card
+            [question]="question"
+            [group]="answersFormArray.controls[i]"
+          />
+        }
+      </div>
+
+      <div class="mt-4">
+        <button
+          type="submit"
+          class="btn btn-danger"
+          [disabled]="isSubmitting()"
+        >
+          {{ isSubmitting() ? "Submitting..." : "Submit Screening" }}
+        </button>
+      </div>
+    </form>
+  }
+</div>

@@ -1,4 +1,4 @@
-export interface LoginRequestDto {
+export interface LoginRequestModel {
   nationalId: string;
   password: string;
 }

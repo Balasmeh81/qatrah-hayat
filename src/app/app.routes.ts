@@ -75,7 +75,13 @@ export const routes: Routes = [
     path: 'user',
     loadComponent: () => import('./layouts/user-layout/user-layout.component')
       .then(c => c.UserLayoutComponent),
-
+    children: [
+      {
+        path: 'screening',
+        loadComponent: () => import('./features/screening/presentation/pages/screening-page/screening-page.component')
+          .then(c => c.ScreeningPageComponent),
+      }
+    ]
   }
 
 ];

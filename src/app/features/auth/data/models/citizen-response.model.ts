@@ -1,4 +1,4 @@
-export interface CitizenResponseDto {
+export interface CitizenResponseModel {
   nationalId: string;
   fullNameAr: string;
   fullNameEn: string;

@@ -10,6 +10,11 @@ export const API_ENDPOINTS = {
   },
   civilStatus: {
     get: `${API_BASE_URL}/api/CivilStatus/{nationalId}`
+  },
+  screening: {
+    submit: `${API_BASE_URL}/api/Screening/submit`,
+    get: `${API_BASE_URL}/api/Screening/questions`
   }
+
 
 };
