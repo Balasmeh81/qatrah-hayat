@@ -1,83 +1,93 @@
 <div class="card shadow-sm border-0" [formGroup]="group">
   <div class="card-body">
     <h5 class="card-title mb-3">
-      {{ question.displayOrder }}. {{ question.textAr }}
+      {{ question.displayOrder }}.
+      {{ isArabicLang ? question.textAr : question.textEn }}
     </h5>
-
-    <p class="text-muted mb-3">{{ question.textEn }}</p>
-
     <div class="d-flex gap-4 mb-3">
-      <div class="form-check">
+      <label class="radio-button" [for]="'yes-' + question.id">
         <input
-          class="form-check-input"
           type="radio"
           [id]="'yes-' + question.id"
           [value]="true"
           formControlName="answer"
         />
-        <label class="form-check-label" [for]="'yes-' + question.id">
-          نعم / Yes
-        </label>
-      </div>
+        <span class="radio"></span>
+        {{ "YES" | translate }}
+      </label>
 
-      <div class="form-check">
+      <label class="radio-button" [for]="'no-' + question.id">
         <input
-          class="form-check-input"
           type="radio"
           [id]="'no-' + question.id"
           [value]="false"
           formControlName="answer"
         />
-        <label class="form-check-label" [for]="'no-' + question.id">
-          لا / No
-        </label>
-      </div>
+        <span class="radio"></span>
+        {{ "NO" | translate }}
+      </label>
     </div>
 
+    @if (group.controls.answer.touched && group.controls.answer.invalid) {
+      <app-form-error-message
+        [errorMessage]="'answer_is_required' | translate"
+      ></app-form-error-message>
+    }
+
     @if (
-      group.get("answer")?.value === true && question.requiresAdditionalText
+      group.controls.answer.value === true && question.requiresAdditionalText
     ) {
       <div class="mb-3">
         <label class="form-label">
-          {{ question.additionalTextLabelAr || "معلومة إضافية" }}
+          {{
+            this.isArabicLang
+              ? question.additionalTextLabelAr
+              : question.additionalTextLabelEn ||
+                (isArabicLang ? "معلومات إضافية" : "Additional Information")
+          }}
         </label>
-        <input
+        <app-text-field
+          [control]="group.controls.additionalText"
           type="text"
-          class="form-control"
-          formControlName="additionalText"
+          prefixIcon="fas fa-info-circle"
         />
       </div>
     }
+    @if (
+      group.controls.additionalText.touched &&
+      group.controls.additionalText.invalid
+    ) {
+      <app-form-error-message
+        [errorMessage]="'this_field_is_required' | translate"
+      ></app-form-error-message>
+    }
 
-    @if (group.get("answer")?.value === true && question.requiresDateValue) {
+    @if (
+      group.controls.answer &&
+      group.controls.answer.value === true &&
+      question.requiresDateValue
+    ) {
       <div class="mb-3">
         <label class="form-label">
-          {{ question.conditionalDateLabelAr || "التاريخ" }}
+          {{
+            this.isArabicLang
+              ? question.conditionalDateLabelAr
+              : question.conditionalDateLabelEn ||
+                (isArabicLang ? "اختر التاريخ" : "Select Date")
+          }}
         </label>
-        <input
-          type="date"
-          class="form-control"
-          formControlName="conditionalDateValue"
-        />
+
+        <app-date-text-field [control]="group.controls.conditionalDateValue" />
       </div>
     }
 
-    @if (group.get("answer")?.touched && group.get("answer")?.invalid) {
-      <div class="text-danger small">يجب اختيار نعم أو لا</div>
-    }
-
     @if (
-      group.get("additionalText")?.touched &&
-      group.get("additionalText")?.invalid
+      group.controls.conditionalDateValue.touched &&
+      group.controls.conditionalDateValue.invalid
     ) {
-      <div class="text-danger small">هذا الحقل مطلوب</div>
-    }
-
-    @if (
-      group.get("conditionalDateValue")?.touched &&
-      group.get("conditionalDateValue")?.invalid
-    ) {
-      <div class="text-danger small">التاريخ مطلوب</div>
+      <app-form-error-message
+        [errorMessage]="'Date_is_required' | translate"
+      ></app-form-error-message>
     }
   </div>
 </div>

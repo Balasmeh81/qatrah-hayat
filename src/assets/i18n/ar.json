@@ -225,9 +225,23 @@
   "PasswordsDoNotMatch": "كلمة المرور غير متطابقة",
 
 
+  "screening-page":"screening-page",
+
+  "SCREENING_PAGE_TITLE_AFTER_LOGIN": "استكمال الملف الصحي",
+  "SCREENING_PAGE_TITLE_PRE_DONATION": "فحص الأهلية قبل التبرع",
+  "Failed_to_load_screening_questions": "فشل تحميل أسئلة الفحص. يرجى المحاولة مرة أخرى لاحقًا.",
+  "submit": "تقديم",
+    "YES": "نعم",
+    "NO": "لا",
+    "answer_is_required": "يجب اختيار نعم أو لا",
+    "this_field_is_required": "هذا الحقل مطلوب",
+    "Date_is_required": "التاريخ مطلوب",
 
 
   "Shared-Keys":"Shared-Keys",
+
+   "Loading": "جار التحميل",
+
   "VIEW_ALL": "عرض الكل",
 
 

@@ -30,10 +30,13 @@ export class UserLoginFormComponent {
   private readonly router = inject(Router);
   private readonly destroy$ = new Subject<void>();
 
-  loginForm: FormGroup<LoginFormModel>;
 
   serverErrorMessage = '';
   isLoading = false;
+
+
+  loginForm: FormGroup<LoginFormModel>;
+
   constructor() {
     this.loginForm = this.fb.group({
       nationalId: this.fb.nonNullable.control('', [

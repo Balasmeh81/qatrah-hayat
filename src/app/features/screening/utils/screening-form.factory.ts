@@ -1,20 +1,10 @@
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ScreeningQuestion } from '../data/models/screening-question.model';
-
-export type ScreeningAnswerFormGroup = FormGroup<{
-  screeningQuestionId: FormControl<number>;
-  answer: FormControl<boolean | null>;
-  additionalText: FormControl<string | null>;
-  conditionalDateValue: FormControl<string | null>;
-}>;
-
-export type ScreeningFormGroup = FormGroup<{
-  answers: FormArray<ScreeningAnswerFormGroup>;
-}>;
+import { ScreeningFormGroup, ScreeningAnswerFormGroup } from '../data/models/screening-form.model';
 
 export class ScreeningFormFactory {
   static createForm(questions: ScreeningQuestion[]): ScreeningFormGroup {
-    const answerGroups = questions.map((question) => {
+    const answerGroups: ScreeningAnswerFormGroup[] = questions.map((question) => {
       return new FormGroup({
         screeningQuestionId: new FormControl(question.id, {
           nonNullable: true,
@@ -29,7 +19,11 @@ export class ScreeningFormFactory {
     });
 
     return new FormGroup({
-      answers: new FormArray(answerGroups)
+      answers: new FormArray(answerGroups),
+      iConfirm: new FormControl(false, {
+        nonNullable: true,
+        validators: [Validators.requiredTrue]
+      })
     });
   }
 }
