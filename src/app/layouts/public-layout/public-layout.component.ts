@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { LandingHeaderComponent } from "../../features/landing/components/landing-header/landing-header.component";
 import { FooterComponent } from "../../shared/components/footer/footer.component";
 import { RouterOutlet } from '@angular/router';
+import { LandingHeaderComponent } from '../../features/landing/presentation/components/landing-header/landing-header.component';
 
 @Component({
   selector: 'app-public-layout',
