@@ -367,6 +367,43 @@
     "gender": {
     "male": "ذكر",
     "female": "أنثى"
-  }
+  },
+
+  "USER_KEYS": "USER_KEYS",
+  "NOTIFICATIONS": "الإشعارات",
+  "NO_NOTIFICATIONS": "لا توجد إشعارات جديدة.",
+  "welcome_message": "مرحباً بعودتك، ",
+  "Start_Donation": "بدء التبرع",
+  "Create_Blood_Request": "إنشاء طلب دم",
+
+    "sidebar-user_KEYS": "sidebar-user_KEYS",
+
+  "MAIN": "الرئيسية",
+  "DASHBOARD": "لوحة التحكم",
+  "MY_PROFILE": "الملف الشخصي",
+  "EligibilityStatus": "حالة الأهلية",
+  "Donation": "التبرع",
+  "DonateBlood": "تبرع بالدم",
+  "MY_DONATIONS": "تبرعاتي",
+  "REQUESTS": "الطلبات",
+  "MY_REQUESTS": "طلباتي",
+  "Services": "الخدمات",
+  "SETTINGS": "الإعدادات",
+  "LOGOUT": "تسجيل الخروج",
+
+
+
+  "LOGIN_VISUAL_TITLE": "معًا ننقذ حياة",
+  "LOGIN_VISUAL_SUBTITLE": "سجّل دخولك للوصول إلى حسابك، متابعة طلبات التبرع، والمساهمة في خدمة المحتاجين للدم بسهولة وأمان.",
+  "LOGIN_VISUAL_FEATURE_1": "متابعة طلبات التبرع بسهولة",
+  "LOGIN_VISUAL_FEATURE_2": "إدارة ملفك الشخصي بأمان",
+  "LOGIN_VISUAL_FEATURE_3": "الوصول إلى الفروع والحملات",
+
+
+    "SIGNUP_VISUAL_TITLE": "ابدأ رحلتك مع قطرة حياة",
+  "SIGNUP_VISUAL_SUBTITLE": "أنشئ حسابك الآن وانضم إلى مجتمع يساهم في دعم المحتاجين للدم بطريقة منظمة وآمنة وسهلة الاستخدام.",
+  "SIGNUP_VISUAL_FEATURE_1": "إنشاء حساب سريع وسهل",
+  "SIGNUP_VISUAL_FEATURE_2": "حماية وأمان لبياناتك",
+  "SIGNUP_VISUAL_FEATURE_3": "المساهمة في إنقاذ حياة الآخرين"
 
 }

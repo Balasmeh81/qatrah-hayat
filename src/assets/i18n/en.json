@@ -365,6 +365,41 @@
  "gender": {
     "male": "Male",
     "female": "Female"
-  }
+  },
 
+    "USER_KEYS": "USER_KEYS",
+  "NOTIFICATIONS": "Notifications",
+  "NO_NOTIFICATIONS": "No new notifications.",
+  "welcome_message": "Welcome back, ",
+  "Start_Donation": "Start Donation",
+  "Create_Blood_Request": "Create Blood Request",
+
+  "sidebar-user_KEYS": "sidebar-user_KEYS",
+
+  "MAIN": "Main",
+  "DASHBOARD": "Dashboard",
+  "MY_PROFILE": "My Profile",
+  "EligibilityStatus": "Eligibility Status",
+  "Donation": "Donation",
+  "DonateBlood": "Donate Blood",
+  "MY_DONATIONS": "My Donations",
+  "REQUESTS": "Requests",
+  "MY_REQUESTS": "My Requests",
+  "Services": "Services",
+  "SETTINGS": "Settings",
+  "LOGOUT": "Logout",
+
+
+
+    "LOGIN_VISUAL_TITLE": "Together, We Save Lives",
+  "LOGIN_VISUAL_SUBTITLE": "Sign in to access your account, track donation requests, and contribute to supporting people in need of blood safely and easily.",
+  "LOGIN_VISUAL_FEATURE_1": "Track donation requests easily",
+  "LOGIN_VISUAL_FEATURE_2": "Manage your profile securely",
+  "LOGIN_VISUAL_FEATURE_3": "Access branches and campaigns",
+
+    "SIGNUP_VISUAL_TITLE": "Start Your Journey with Qatrah Hayat",
+  "SIGNUP_VISUAL_SUBTITLE": "Create your account now and join a community that helps support people in need of blood through a safe and well-organized platform.",
+  "SIGNUP_VISUAL_FEATURE_1": "Quick and easy account creation",
+  "SIGNUP_VISUAL_FEATURE_2": "Secure and protected data",
+  "SIGNUP_VISUAL_FEATURE_3": "Help save others’ lives"
 }

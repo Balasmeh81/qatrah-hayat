@@ -2,6 +2,7 @@ import { AfterViewInit, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import * as AOS from 'aos';
 import { LanguageService } from './core/services/language.service';
+import { AuthService } from './features/auth/data/services/auth.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,6 +11,11 @@ import { LanguageService } from './core/services/language.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements AfterViewInit {
+  private readonly authService = inject(AuthService);
+
+  constructor() {
+    this.authService.restoreUserFromStorage();
+  }
   ngAfterViewInit() {
     AOS.init(
       {

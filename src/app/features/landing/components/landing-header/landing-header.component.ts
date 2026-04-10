@@ -16,11 +16,9 @@ export class LandingHeaderComponent {
   reload() {
     window.location.reload();
   }
-
-
-  toggleLanguage() {
+  async toggleLanguage() {
     this.reload();
-    this.langService.switchLanguage();
+    await this.langService.switchLanguage();
   }
 
 }

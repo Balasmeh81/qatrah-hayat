@@ -20,7 +20,7 @@ import { BloodTypeEnum } from '../../../data/enums/blood-type-enum';
 import { GenderEnum } from '../../../data/enums/gender-enum';
 import { MaritalStatusEnum } from '../../../data/enums/marital-status-enum';
 import { Failure, NotFoundFailure } from '../../../../../core/errors/failure';
-import { mapSignUpFormToRegisterRequest } from '../../../data/mapper/register.mapper';
+import { mapSignUpFormToRegisterRequest } from '../../../data/mappers/register.mapper';
 import { SignUpFormValue } from '../../../data/models/sign-up-form-value.model';
 import { CitizenService } from '../../../data/services/citizen.service';
 import { TranslateService } from '@ngx-translate/core';
