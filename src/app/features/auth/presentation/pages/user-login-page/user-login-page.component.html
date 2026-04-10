@@ -1,22 +1,56 @@
-<div
-  class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
->
-  <div class="row">
-    <div class="col-12">
-      <div class="auth-container" data-aos="fade-up" data-aos-delay="150">
-        <!-- heading -->
-        <app-user-auth-container-heading
-          title="{{ 'LOGIN_PAGE_TITLE' | translate }}"
-          subtitle="{{ 'LOGIN_PAGE_SUBTITLE' | translate }}"
-        ></app-user-auth-container-heading>
-        <!-- form -->
-        <app-user-login-form></app-user-login-form>
-        <!-- footer -->
-        <app-user-auth-container-footer
-          text="{{ 'LOGIN_PAGE_FOOTER_TEXT' | translate }}"
-          linkText="{{ 'LOGIN_PAGE_FOOTER_LINK_TEXT' | translate }}"
-          linkUrl="/user-auth/signup"
-        ></app-user-auth-container-footer>
+<div class="auth-page">
+  <div class="auth-split-layout">
+    <!-- Visual Side -->
+    <div class="auth-visual" data-aos="fade-left" data-aos-delay="100">
+      <div class="auth-visual-content">
+        <div class="auth-badge">
+          <img src="assets/images/login.svg" alt="Qatrah Hayat Logo" />
+        </div>
+
+        <h1>{{ "LOGIN_VISUAL_TITLE" | translate }}</h1>
+        <p>
+          {{ "LOGIN_VISUAL_SUBTITLE" | translate }}
+        </p>
+
+        <div class="auth-features">
+          <div class="feature-item">
+            <i class="fa-solid fa-droplet"></i>
+            <span>{{ "LOGIN_VISUAL_FEATURE_1" | translate }}</span>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa-solid fa-heart-circle-check"></i>
+            <span>{{ "LOGIN_VISUAL_FEATURE_2" | translate }}</span>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa-solid fa-hospital"></i>
+            <span>{{ "LOGIN_VISUAL_FEATURE_3" | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Side -->
+    <div class="auth-form-side">
+      <div class="auth-form-wrapper" data-aos="fade-up" data-aos-delay="150">
+        <div class="auth-container">
+          <!-- heading -->
+          <app-user-auth-container-heading
+            title="{{ 'LOGIN_PAGE_TITLE' | translate }}"
+            subtitle="{{ 'LOGIN_PAGE_SUBTITLE' | translate }}"
+          ></app-user-auth-container-heading>
+
+          <!-- form -->
+          <app-user-login-form></app-user-login-form>
+
+          <!-- footer -->
+          <app-user-auth-container-footer
+            text="{{ 'LOGIN_PAGE_FOOTER_TEXT' | translate }}"
+            linkText="{{ 'LOGIN_PAGE_FOOTER_LINK_TEXT' | translate }}"
+            linkUrl="/user-auth/signup"
+          ></app-user-auth-container-footer>
+        </div>
       </div>
     </div>
   </div>
