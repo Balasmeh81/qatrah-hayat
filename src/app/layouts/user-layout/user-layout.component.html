@@ -1,3 +1,18 @@
-<main class="min-vh-100 main-container">
-  <router-outlet></router-outlet>
-</main>
+<app-user-header (menuToggle)="toggleSidebar()"></app-user-header>
+
+<div class="user-layout-shell">
+  <app-user-sidebar
+    [isOpen]="isSidebarOpen"
+    (closeSidebar)="closeSidebar()"
+  ></app-user-sidebar>
+
+  <main class="main-container">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<div
+  class="sidebar-backdrop"
+  [class.show]="isSidebarOpen"
+  (click)="closeSidebar()"
+></div>

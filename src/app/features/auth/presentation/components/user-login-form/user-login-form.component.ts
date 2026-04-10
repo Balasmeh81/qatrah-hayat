@@ -87,7 +87,7 @@ export class UserLoginFormComponent {
           });
           return;
         }
-        this.router.navigate(['/user']);
+        this.router.navigate(['/user/dashboard']);
       },
       error: (error: Failure) => {
         this.isLoading = false;

@@ -12,13 +12,8 @@ import { LanguageService } from '../../../../../core/services/language.service';
 })
 export class UserAuthHeaderComponent {
   langService = inject(LanguageService);
-  reload() {
-    window.location.reload();
-  }
 
-
-  toggleLanguage() {
-    this.reload();
-    this.langService.switchLanguage();
+  async toggleLanguage() {
+    await this.langService.switchLanguage();
   }
 }

@@ -113,7 +113,7 @@ export class ScreeningPageComponent implements OnInit {
       next: (response) => {
         this.isSubmitting.set(false);
         console.log('Received response:', response);
-        this.router.navigate(['user'])
+        this.router.navigate(['/user/dashboard']);
 
       },
       error: (error) => {

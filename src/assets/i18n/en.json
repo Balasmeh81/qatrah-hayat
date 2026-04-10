@@ -365,6 +365,27 @@
  "gender": {
     "male": "Male",
     "female": "Female"
-  }
+  },
 
+    "USER_KEYS": "USER_KEYS",
+  "NOTIFICATIONS": "Notifications",
+  "NO_NOTIFICATIONS": "No new notifications.",
+  "welcome_message": "Welcome back, ",
+  "Start_Donation": "Start Donation",
+  "Create_Blood_Request": "Create Blood Request",
+
+  "sidebar-user_KEYS": "sidebar-user_KEYS",
+
+  "MAIN": "Main",
+  "DASHBOARD": "Dashboard",
+  "MY_PROFILE": "My Profile",
+  "EligibilityStatus": "Eligibility Status",
+  "Donation": "Donation",
+  "DonateBlood": "Donate Blood",
+  "MY_DONATIONS": "My Donations",
+  "REQUESTS": "Requests",
+  "MY_REQUESTS": "My Requests",
+  "Services": "Services",
+  "SETTINGS": "Settings",
+  "LOGOUT": "Logout"
 }

@@ -1,0 +1,103 @@
+<aside
+  class="user-sidebar"
+  [class.open]="isOpen"
+  [class.rtl]="isArabic"
+  [class.ltr]="!isArabic"
+>
+  <div class="sidebar-header">
+    <div class="sidebar-user">
+      <div class="avatar">عب</div>
+      <div class="user-info">
+        <h6>عبدالله بلاسمه</h6>
+      </div>
+    </div>
+
+    <button class="close-btn d-lg-none" (click)="close()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <div class="sidebar-section">
+    <p class="section-title">{{ "MAIN" | translate }}</p>
+
+    <a routerLink="/user/dashboard" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-house"></i>
+      <span>{{ "DASHBOARD" | translate }}</span>
+    </a>
+
+    <a routerLink="/user/profile" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-user"></i>
+      <span>{{ "MY_PROFILE" | translate }}</span>
+    </a>
+
+    <a
+      routerLink="/user/eligibility"
+      routerLinkActive="active"
+      (click)="close()"
+    >
+      <i class="fa-solid fa-shield-heart"></i>
+      <span>{{ "EligibilityStatus" | translate }}</span>
+    </a>
+  </div>
+
+  <div class="sidebar-section">
+    <p class="section-title">{{ "Donation" | translate }}</p>
+
+    <a routerLink="/user/donate" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-droplet"></i>
+      <span>{{ "DonateBlood" | translate }}</span>
+    </a>
+
+    <a routerLink="/user/donations" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-hand-holding-medical"></i>
+      <span>{{ "MY_DONATIONS" | translate }}</span>
+    </a>
+  </div>
+  <div class="sidebar-section">
+    <p class="section-title">{{ "REQUESTS" | translate }}</p>
+
+    <a
+      routerLink="/user/requests/new"
+      routerLinkActive="active"
+      (click)="close()"
+    >
+      <i class="fa-solid fa-file-circle-plus"></i>
+      <span>{{ "Create_Blood_Request" | translate }}</span>
+    </a>
+
+    <a routerLink="/user/requests" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-file-lines"></i>
+      <span>{{ "MY_REQUESTS" | translate }}</span>
+    </a>
+  </div>
+
+  <div class="sidebar-section">
+    <p class="section-title">{{ "Services" | translate }}</p>
+
+    <a routerLink="/user/campaigns" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-bullhorn"></i>
+      <span>{{ "CAMPAIGNS" | translate }}</span>
+    </a>
+
+    <a
+      routerLink="/user/notifications"
+      routerLinkActive="active"
+      (click)="close()"
+    >
+      <i class="fa-solid fa-bell"></i>
+      <span>{{ "NOTIFICATIONS" | translate }}</span>
+    </a>
+
+    <a routerLink="/user/settings" routerLinkActive="active" (click)="close()">
+      <i class="fa-solid fa-gear"></i>
+      <span>{{ "SETTINGS" | translate }}</span>
+    </a>
+  </div>
+
+  <div class="sidebar-footer">
+    <button class="logout-btn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span>{{ "LOGOUT" | translate }}</span>
+    </button>
+  </div>
+</aside>

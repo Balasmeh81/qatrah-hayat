@@ -73,6 +73,7 @@ export const routes: Routes = [
   },
   {
     path: 'user',
+
     loadComponent: () => import('./layouts/user-layout/user-layout.component')
       .then(c => c.UserLayoutComponent),
     children: [
@@ -80,7 +81,12 @@ export const routes: Routes = [
         path: 'screening',
         loadComponent: () => import('./features/screening/presentation/pages/screening-page/screening-page.component')
           .then(c => c.ScreeningPageComponent),
-      }
+      },
+      {
+        path: 'dashboard',
+        loadComponent: () => import('./features/user/presentation/pages/user-dashboard/user-dashboard.component')
+          .then(c => c.UserDashboardComponent),
+      },
     ]
   }
 

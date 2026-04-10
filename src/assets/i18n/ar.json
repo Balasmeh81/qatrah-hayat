@@ -367,6 +367,27 @@
     "gender": {
     "male": "ذكر",
     "female": "أنثى"
-  }
+  },
 
+  "USER_KEYS": "USER_KEYS",
+  "NOTIFICATIONS": "الإشعارات",
+  "NO_NOTIFICATIONS": "لا توجد إشعارات جديدة.",
+  "welcome_message": "مرحباً بعودتك، ",
+  "Start_Donation": "بدء التبرع",
+  "Create_Blood_Request": "إنشاء طلب دم",
+
+    "sidebar-user_KEYS": "sidebar-user_KEYS",
+
+  "MAIN": "الرئيسية",
+  "DASHBOARD": "لوحة التحكم",
+  "MY_PROFILE": "الملف الشخصي",
+  "EligibilityStatus": "حالة الأهلية",
+  "Donation": "التبرع",
+  "DonateBlood": "تبرع بالدم",
+  "MY_DONATIONS": "تبرعاتي",
+  "REQUESTS": "الطلبات",
+  "MY_REQUESTS": "طلباتي",
+  "Services": "الخدمات",
+  "SETTINGS": "الإعدادات",
+  "LOGOUT": "تسجيل الخروج"
 }
