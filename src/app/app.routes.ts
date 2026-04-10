@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './core/guards/auth.guard';
+import { guestGuard } from './core/guards/guest.guard';
 
 export const routes: Routes = [
   {
@@ -8,6 +10,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
+        pathMatch: 'full',
         loadComponent: () => import('./features/landing/pages/landing-page/landing-page.component')
           .then(c => c.LandingPageComponent),
       },
@@ -41,6 +44,7 @@ export const routes: Routes = [
 
   {
     path: 'user-auth',
+    canActivate: [guestGuard],
     loadComponent: () => import('./layouts/user-auth-layout/user-auth-layout.component')
       .then(c => c.UserAuthLayoutComponent),
     children: [
@@ -68,12 +72,17 @@ export const routes: Routes = [
         path: 'new-password',
         loadComponent: () => import('./features/auth/presentation/pages/auth-new-password-page/auth-new-password-page.component')
           .then(c => c.AuthNewPasswordPageComponent),
+      },
+      {
+        path: '**',
+        redirectTo: 'login'
       }
     ],
   },
+
   {
     path: 'user',
-
+    canActivate: [authGuard],
     loadComponent: () => import('./layouts/user-layout/user-layout.component')
       .then(c => c.UserLayoutComponent),
     children: [
@@ -87,7 +96,15 @@ export const routes: Routes = [
         loadComponent: () => import('./features/user/presentation/pages/user-dashboard/user-dashboard.component')
           .then(c => c.UserDashboardComponent),
       },
-    ]
-  }
+      {
+        path: '**',
+        redirectTo: 'dashboard'
+      }
+    ],
+  },
 
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];

@@ -7,12 +7,12 @@ import { PasswordTextFieldComponent } from '../../../../../shared/components/pas
 import { TextFieldComponent } from '../../../../../shared/components/text-field/text-field.component';
 import { SharedForAuth } from '../../../../../shared/shared-imports/shared';
 import { LoginFormModel } from '../../../data/models/login-form.model';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { finalize, Subject, takeUntil } from 'rxjs';
 import { AuthService } from '../../../data/services/auth.service';
 import { LoginFormValueModel } from '../../../data/models/login-form-value-model';
-import { mapLoginFormToLoginRequest } from '../../../data/mapper/login.mapper';
+import { mapLoginFormToLoginRequest } from '../../../data/mappers/login.mapper';
 import { Failure } from '../../../../../core/errors/failure';
 import { ScreeningSessionType } from '../../../../screening/data/enums/screening-session-type.enum';
 
@@ -23,7 +23,7 @@ import { ScreeningSessionType } from '../../../../screening/data/enums/screening
   styleUrl: './user-login-form.component.css'
 })
 export class UserLoginFormComponent {
-
+  private readonly activatedRoute = inject(ActivatedRoute);
   private readonly authService = inject(AuthService);
   private readonly fb = inject(FormBuilder);
   private readonly translate = inject(TranslateService);
@@ -76,8 +76,8 @@ export class UserLoginFormComponent {
     ).subscribe({
       next: (response) => {
         this.isLoading = false;
-        console.log('Login response:', response);
         this.clearData();
+
         if (!response.isProfileCompleted) {
           this.router.navigate(['/user/screening'], {
             queryParams: {
@@ -87,7 +87,9 @@ export class UserLoginFormComponent {
           });
           return;
         }
-        this.router.navigate(['/user/dashboard']);
+
+        const returnUrl = this.activatedRoute.snapshot.queryParamMap.get('returnUrl');
+        this.router.navigateByUrl(returnUrl || '/user/dashboard');
       },
       error: (error: Failure) => {
         this.isLoading = false;

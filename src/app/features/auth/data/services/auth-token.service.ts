@@ -13,12 +13,15 @@ export class AuthTokenService {
   getToken(): string | null {
     return localStorage.getItem(this.tokenKey);
   }
+  hasToken(): boolean {
+    return !!this.getToken();
+  }
 
   clear(): void {
     localStorage.removeItem(this.tokenKey);
   }
 
   isAuthenticated(): boolean {
-    return !!this.getToken();
+    return this.hasToken();
   }
 }

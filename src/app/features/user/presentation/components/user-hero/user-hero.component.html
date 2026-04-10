@@ -3,7 +3,16 @@
 
   <div class="hero-content container">
     <div class="user-name" data-aos="fade-down" data-aos-delay="100">
-      <p>{{ "welcome_message" | translate }} <span>عبدالله</span></p>
+      <p>
+        {{ "welcome_message" | translate }}
+        <span>
+          {{
+            isArabic
+              ? getUserNameTwoPart(authState.currentUser()?.fullNameAr)
+              : getUserNameTwoPart(authState.currentUser()?.fullNameEn)
+          }}</span
+        >
+      </p>
     </div>
     <div class="hero-text text-center">
       <h1 class="hero-title" data-aos="fade-down" data-aos-delay="150">

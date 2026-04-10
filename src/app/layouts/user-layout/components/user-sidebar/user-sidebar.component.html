@@ -6,9 +6,23 @@
 >
   <div class="sidebar-header">
     <div class="sidebar-user">
-      <div class="avatar">عب</div>
+      <div class="avatar">
+        {{
+          getUserAvatar(
+            isArabic
+              ? authState.currentUser()?.fullNameAr
+              : authState.currentUser()?.fullNameEn
+          )
+        }}
+      </div>
       <div class="user-info">
-        <h6>عبدالله بلاسمه</h6>
+        <h6>
+          {{
+            isArabic
+              ? authState.currentUser()?.fullNameAr
+              : authState.currentUser()?.fullNameEn
+          }}
+        </h6>
       </div>
     </div>
 
@@ -95,7 +109,7 @@
   </div>
 
   <div class="sidebar-footer">
-    <button class="logout-btn">
+    <button class="logout-btn" (click)="onLogout()">
       <i class="fa-solid fa-right-from-bracket"></i>
       <span>{{ "LOGOUT" | translate }}</span>
     </button>
