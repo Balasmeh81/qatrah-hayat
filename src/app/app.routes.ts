@@ -97,6 +97,11 @@ export const routes: Routes = [
           .then(c => c.UserDashboardComponent),
       },
       {
+        path: 'donate',
+        loadComponent: () => import('./features/user/presentation/pages/donate-page/donate-page.component')
+          .then(c => c.DonatePageComponent)
+      },
+      {
         path: '**',
         redirectTo: 'dashboard'
       }
