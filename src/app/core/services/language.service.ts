@@ -1,37 +1,35 @@
 import { Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 
 type Lang = 'en' | 'ar';
 
-/* this section applies the language to the whole app */
 @Injectable({
   providedIn: 'root'
 })
-
 export class LanguageService {
-  /* this key is used to store the language in the local storage */
   private readonly key = 'lang';
-  constructor(private translate: TranslateService) {
 
-    const browserLang = this.translate.getBrowserLang() as Lang;
+  constructor(private translate: TranslateService) { }
 
-    const savedLang =
-      (localStorage.getItem(this.key) as Lang) ||
-      (browserLang === 'ar' ? 'ar' : 'en');
+  async init(): Promise<void> {
+    const savedLang = this.getSavedLanguage();
+    const langToUse: Lang = savedLang ?? 'ar';
 
-      /* sets the fallback language to english */
-    this.translate.setFallbackLang('en');
-    this.setLanguage(savedLang);
+    this.translate.setFallbackLang('ar');
+    await firstValueFrom(this.translate.use(langToUse));
+
+    document.documentElement.lang = langToUse;
+    document.documentElement.dir = langToUse === 'ar' ? 'rtl' : 'ltr';
   }
 
-  switchLanguage(): void {
+  async switchLanguage(): Promise<void> {
     const newLang: Lang = this.currentLang === 'en' ? 'ar' : 'en';
-    this.setLanguage(newLang);
+    await this.setLanguage(newLang);
   }
 
-  setLanguage(lang: Lang): void {
-
-    this.translate.use(lang);
+  async setLanguage(lang: Lang): Promise<void> {
+    await firstValueFrom(this.translate.use(lang));
 
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -40,6 +38,11 @@ export class LanguageService {
   }
 
   get currentLang(): Lang {
-    return (this.translate.getCurrentLang() as Lang) || 'en';
+    return (this.translate.getCurrentLang() as Lang) || 'ar';
+  }
+
+  private getSavedLanguage(): Lang | null {
+    const value = localStorage.getItem(this.key);
+    return value === 'ar' || value === 'en' ? value : null;
   }
 }

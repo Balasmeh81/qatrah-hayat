@@ -2,17 +2,9 @@
   class="form-inputs"
   [class.focused]="isFocused"
   [class.invalid-input]="isInvalid"
-  data-aos="fade-down"
-  data-aos-delay="300"
 >
   @if (prefixIcon) {
-    <i
-      class="prefix-icon"
-      [class]="prefixIcon"
-      aria-hidden="true"
-      data-aos="fade-down"
-      data-aos-delay="350"
-    ></i>
+    <i class="prefix-icon" [class]="prefixIcon" aria-hidden="true"></i>
   } @else {
     <span class="prefix-spacer" aria-hidden="true"></span>
   }
@@ -30,8 +22,6 @@
     (focus)="readonly ? null : onFocus()"
     (blur)="onBlur()"
     (input)="onInput($event)"
-    data-aos="fade-down"
-    data-aos-delay="350"
   />
 
   @if (hasSuffix) {

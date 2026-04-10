@@ -1,0 +1,103 @@
+.radio-button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  align-items: center;
+  color: var(--primary-color-text);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.radio-button input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transform: translateZ(-25px);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked+.radio {
+  border-color: var(--secondary-color);
+  transform: translateZ(0px);
+  background-color: var(--text-color);
+
+}
+
+.radio-button input[type="radio"]:checked+.radio::before {
+  opacity: 1;
+}
+
+.form-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface-ground);
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: var(--box-shadow);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 1) default state */
+.form-inputs:not(.focused):not(.invalid-input) {
+  border: 1px solid #cfcfcf;
+}
+
+/* 2) focus state */
+.form-inputs.focused {
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(10, 23, 55, 0.08);
+}
+
+/* 3) invalid state */
+.form-inputs.invalid-input {
+  border: 1px solid var(--primary-color);
+  box-shadow: none;
+}
+
+.text-input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color-text);
+}
+
+.text-input::placeholder {
+  font-weight: 500;
+  color: #777;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color-text);
+}

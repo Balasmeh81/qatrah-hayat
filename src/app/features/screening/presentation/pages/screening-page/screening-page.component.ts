@@ -4,14 +4,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ScreeningSessionType } from '../../../data/enums/screening-session-type.enum';
 import { ScreeningQuestion } from '../../../data/models/screening-question.model';
 import { ScreeningService } from '../../../data/services/screening.service';
-import { ScreeningFormGroup, ScreeningFormFactory, ScreeningAnswerFormGroup } from '../../../utils/screening-form.factory';
+import { ScreeningFormFactory } from '../../../utils/screening-form.factory';
 import { SubmittedScreeningQuestionsRequestModel } from '../../../data/models/submitted-screening-questions-request.model';
 import { CommonModule } from '@angular/common';
 import { ScreeningQuestionCardComponent } from "../../components/screening-question-card/screening-question-card.component";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LoadingComponent } from "../../../../../shared/components/loading/loading.component";
+import { AppPrimaryButtonComponent } from "../../../../../shared/components/app-primary-button/app-primary-button.component";
+import { ScreeningFormGroup, ScreeningAnswerFormGroup } from '../../../data/models/screening-form.model';
+import { CheckBoxInputComponent } from "../../../../../shared/components/check-box-input/check-box-input.component";
+import { FormErrorMessageComponent } from "../../../../../shared/components/form-error-message/form-error-message.component";
 
 @Component({
   selector: 'app-screening-page',
-  imports: [CommonModule, ReactiveFormsModule, ScreeningQuestionCardComponent],
+  imports: [CommonModule, ReactiveFormsModule, ScreeningQuestionCardComponent, TranslateModule, LoadingComponent, AppPrimaryButtonComponent, CheckBoxInputComponent, FormErrorMessageComponent],
   templateUrl: './screening-page.component.html',
   styleUrl: './screening-page.component.css'
 })
@@ -19,7 +25,7 @@ export class ScreeningPageComponent implements OnInit {
   private readonly screeningService = inject(ScreeningService);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
-
+  private readonly translate = inject(TranslateService);
   protected readonly isLoading = signal(false);
   protected readonly isSubmitting = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
@@ -48,7 +54,7 @@ export class ScreeningPageComponent implements OnInit {
     const donationIntentIdParam = this.route.snapshot.queryParamMap.get('donationIntentId');
 
     if (!sessionTypeParam) {
-      this.errorMessage.set('Session type is missing.');
+      this.errorMessage.set(this.translate.instant('Failed_to_load_screening_questions'));
       return false;
     }
 
@@ -61,17 +67,15 @@ export class ScreeningPageComponent implements OnInit {
   private loadQuestions(): void {
     this.isLoading.set(true);
     this.errorMessage.set(null);
-    console.log('Loading questions with sessionType:', this.sessionType, 'isForFemaleOnly:', this.isForFemaleOnly);
     this.screeningService.getScreeningQuestions(this.sessionType, this.isForFemaleOnly).subscribe({
       next: (questions) => {
         const sortedQuestions = [...questions].sort((a, b) => a.displayOrder - b.displayOrder);
         this.questions.set(sortedQuestions);
         this.form = ScreeningFormFactory.createForm(sortedQuestions);
         this.isLoading.set(false);
-        console.log('Loaded questions', sortedQuestions);
       },
       error: (error) => {
-        this.errorMessage.set(error?.error?.message ?? 'Failed to load screening questions.');
+        this.errorMessage.set(this.translate.instant('Failed_to_load_screening_questions'));
         this.isLoading.set(false);
       }
     });
@@ -91,7 +95,7 @@ export class ScreeningPageComponent implements OnInit {
       return;
     }
 
-    const payload: SubmittedScreeningQuestionsRequestModel = {
+    const request: SubmittedScreeningQuestionsRequestModel = {
       sessionType: this.sessionType,
       donationIntentId: this.donationIntentId,
       answers: this.form.getRawValue().answers.map((answer) => ({
@@ -104,21 +108,18 @@ export class ScreeningPageComponent implements OnInit {
 
     this.isSubmitting.set(true);
     this.errorMessage.set(null);
-
-    this.screeningService.submitScreeningQuestions(payload).subscribe({
+    console.log('Submitting payload:', request);
+    this.screeningService.submitScreeningQuestions(request).subscribe({
       next: (response) => {
         this.isSubmitting.set(false);
+        console.log('Received response:', response);
+        this.router.navigate(['user'])
 
-
-        console.log('Submit success', response);
-
-        this.router.navigate(['/screening/result'], {
-          state: { response }
-        });
       },
       error: (error) => {
         this.isSubmitting.set(false);
-        this.errorMessage.set(error?.error?.message ?? 'Failed to submit screening answers.');
+        this.errorMessage.set(this.translate.instant('Failed_to_submit_screening_questions'));
+        console.error('Submission error:', error);
       }
     });
   }

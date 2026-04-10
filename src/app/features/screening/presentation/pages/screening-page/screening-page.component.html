@@ -1,8 +1,15 @@
 <div class="screening-page container py-4">
-  <h2 class="mb-3">Screening Questions</h2>
+  <h2 class="mb-4 text-center fw-bold">
+    {{
+      (sessionType === 1
+        ? "SCREENING_PAGE_TITLE_AFTER_LOGIN"
+        : "SCREENING_PAGE_TITLE_PRE_DONATION"
+      ) | translate
+    }}
+  </h2>
 
   @if (isLoading()) {
-    <div class="alert alert-info">Loading questions...</div>
+    <app-loading></app-loading>
   }
 
   @if (errorMessage()) {
@@ -21,15 +28,27 @@
           />
         }
       </div>
-
       <div class="mt-4">
-        <button
+        <app-check-box-input
+          [control]="form.controls.iConfirm"
+          inputId="iConfirm"
+          label="{{ 'I_CONFIRM' | translate }}"
+          name="iConfirm"
+        />
+        @if (form.controls.iConfirm.touched && form.controls.iConfirm.invalid) {
+          <app-form-error-message
+            [errorMessage]="'YouMustAgreeToTerms' | translate"
+          ></app-form-error-message>
+        }
+      </div>
+      <div class="mt-4">
+        <app-primary-button
+          label="{{ 'submit' | translate }}"
           type="submit"
-          class="btn btn-danger"
           [disabled]="isSubmitting()"
+          [isLoading]="isSubmitting()"
         >
-          {{ isSubmitting() ? "Submitting..." : "Submit Screening" }}
-        </button>
+        </app-primary-button>
       </div>
     </form>
   }

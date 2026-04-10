@@ -30,10 +30,13 @@ export class UserLoginFormComponent {
   private readonly router = inject(Router);
   private readonly destroy$ = new Subject<void>();
 
-  loginForm: FormGroup<LoginFormModel>;
 
   serverErrorMessage = '';
   isLoading = false;
+
+
+  loginForm: FormGroup<LoginFormModel>;
+
   constructor() {
     this.loginForm = this.fb.group({
       nationalId: this.fb.nonNullable.control('', [
@@ -76,7 +79,7 @@ export class UserLoginFormComponent {
         console.log('Login response:', response);
         this.clearData();
         if (!response.isProfileCompleted) {
-          this.router.navigate(['//user/screening'], {
+          this.router.navigate(['/user/screening'], {
             queryParams: {
               sessionType: ScreeningSessionType.Registration,
               isForFemaleOnly: response.gender === 2

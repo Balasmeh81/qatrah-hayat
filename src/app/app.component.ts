@@ -1,6 +1,7 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import * as AOS from 'aos';
+import { LanguageService } from './core/services/language.service';
 @Component({
   selector: 'app-root',
   standalone: true,

@@ -226,7 +226,23 @@
   "ConfirmPasswordIsRequired": "Confirm Password is required",
   "PasswordsDoNotMatch": "Passwords do not match",
 
+  "screening-page":"screening-page",
+
+  "SCREENING_PAGE_TITLE_AFTER_LOGIN": "Complete Your Health Profile",
+  "SCREENING_PAGE_TITLE_PRE_DONATION": "Pre-Donation Health Check",
+  "Failed_to_load_screening_questions": "Failed to load screening questions. Please try again later.",
+    "submit": "Submit",
+    "YES": "Yes",
+    "NO": "No",
+"answer_is_required": "You must select Yes or No",
+"this_field_is_required": "This field is required",
+"Date_is_required": "Date is required",
+"Failed_to_submit_screening_questions": "Failed to submit screening questions. Please try again later.",
+
   "Shared-Keys": "Shared-Keys",
+
+    "Loading": "Loading",
+
   "VIEW_ALL": "View All",
 
   "Privacy-Keys": "Privacy-Keys",
