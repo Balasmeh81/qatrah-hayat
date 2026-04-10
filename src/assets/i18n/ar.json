@@ -416,6 +416,15 @@
     "Eligible":"مؤهل",
     "TempDeferred":"تأجيل مؤقت",
     "PermDeferred":"منع دائم"
+  },
+
+    "USER_DASHBOARD": {
+    "URGENT_BLOOD_NEEDS": {
+      "TITLE": "احتياجات الدم العاجلة",
+      "DONATE": "تبرع",
+      "NEED": "حاجة",
+      "BLOOD_TYPE": "زمرة الدم"
+    }
   }
 
 

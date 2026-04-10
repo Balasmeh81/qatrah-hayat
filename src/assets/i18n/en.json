@@ -414,6 +414,17 @@
     "Eligible":"Eligible",
     "TempDeferred":"Temp Deferred",
     "PermDeferred":"Perm Deferred"
+  },
+
+
+  "USER_DASHBOARD": {
+    "URGENT_BLOOD_NEEDS": {
+      "TITLE": "Urgent Blood Needs",
+      "DONATE": "Donate",
+      "NEED": "NEED",
+      "BLOOD_TYPE": "Blood Type"
+    }
   }
+
 
 }
