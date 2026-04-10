@@ -6,6 +6,6 @@ export interface SubmittedScreeningResponseModel {
   sessionType: ScreeningSessionType,
   isProfileCompleted: boolean,
   resultEligibilityStatus: EligibilityStatus,
-  createdAt: Date,
+  createdAt: string,
   savedAnswersCount: number
 }

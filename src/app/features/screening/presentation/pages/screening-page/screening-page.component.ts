@@ -95,7 +95,7 @@ export class ScreeningPageComponent implements OnInit {
       return;
     }
 
-    const payload: SubmittedScreeningQuestionsRequestModel = {
+    const request: SubmittedScreeningQuestionsRequestModel = {
       sessionType: this.sessionType,
       donationIntentId: this.donationIntentId,
       answers: this.form.getRawValue().answers.map((answer) => ({
@@ -108,18 +108,18 @@ export class ScreeningPageComponent implements OnInit {
 
     this.isSubmitting.set(true);
     this.errorMessage.set(null);
-
-    this.screeningService.submitScreeningQuestions(payload).subscribe({
+    console.log('Submitting payload:', request);
+    this.screeningService.submitScreeningQuestions(request).subscribe({
       next: (response) => {
         this.isSubmitting.set(false);
+        console.log('Received response:', response);
+        this.router.navigate(['user'])
 
-        this.router.navigate(['/screening/result'], {
-          state: { response }
-        });
       },
       error: (error) => {
         this.isSubmitting.set(false);
-        this.errorMessage.set(this.translate.instant('Failed_to_load_screening_questions'));
+        this.errorMessage.set(this.translate.instant('Failed_to_submit_screening_questions'));
+        console.error('Submission error:', error);
       }
     });
   }

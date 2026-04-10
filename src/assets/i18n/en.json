@@ -237,7 +237,7 @@
 "answer_is_required": "You must select Yes or No",
 "this_field_is_required": "This field is required",
 "Date_is_required": "Date is required",
-
+"Failed_to_submit_screening_questions": "Failed to submit screening questions. Please try again later.",
 
   "Shared-Keys": "Shared-Keys",
 

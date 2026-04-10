@@ -236,6 +236,7 @@
     "answer_is_required": "يجب اختيار نعم أو لا",
     "this_field_is_required": "هذا الحقل مطلوب",
     "Date_is_required": "التاريخ مطلوب",
+    "Failed_to_submit_screening_questions": "فشل في تقديم أسئلة الفحص. يرجى المحاولة مرة أخرى لاحقًا.",
 
 
   "Shared-Keys":"Shared-Keys",

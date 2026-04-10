@@ -16,12 +16,13 @@ export class ScreeningService {
   private readonly getScreeningUrl = API_ENDPOINTS.screening.get;
 
 
-  submitScreeningQuestions(request: SubmittedScreeningQuestionsRequestModel): Observable<SubmittedScreeningResponseModel> {
-    this.api.post<SubmittedScreeningQuestionsRequestModel, SubmittedScreeningResponseModel>(
+  submitScreeningQuestions(
+    request: SubmittedScreeningQuestionsRequestModel
+  ): Observable<SubmittedScreeningResponseModel> {
+    return this.api.post<SubmittedScreeningQuestionsRequestModel, SubmittedScreeningResponseModel>(
       this.submitScreeningUrl,
       request
     );
-    return new Observable<SubmittedScreeningResponseModel>();
   }
   getScreeningQuestions(sessionType: ScreeningSessionType,
     isForFemaleOnly: boolean): Observable<ScreeningQuestion[]> {
