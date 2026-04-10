@@ -404,6 +404,19 @@
   "SIGNUP_VISUAL_SUBTITLE": "أنشئ حسابك الآن وانضم إلى مجتمع يساهم في دعم المحتاجين للدم بطريقة منظمة وآمنة وسهلة الاستخدام.",
   "SIGNUP_VISUAL_FEATURE_1": "إنشاء حساب سريع وسهل",
   "SIGNUP_VISUAL_FEATURE_2": "حماية وأمان لبياناتك",
-  "SIGNUP_VISUAL_FEATURE_3": "المساهمة في إنقاذ حياة الآخرين"
+  "SIGNUP_VISUAL_FEATURE_3": "المساهمة في إنقاذ حياة الآخرين",
+
+  "Unread":"غير مقروء",
+  "Active_Requests":"الطلبات النشطة",
+  "Current_Status":"الوضع الحالي",
+  "Total_Donations":"إجمالي التبرعات",
+
+
+    "EligibilityStatusOpts":{
+    "Eligible":"مؤهل",
+    "TempDeferred":"تأجيل مؤقت",
+    "PermDeferred":"منع دائم"
+  }
+
 
 }

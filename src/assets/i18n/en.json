@@ -401,5 +401,19 @@
   "SIGNUP_VISUAL_SUBTITLE": "Create your account now and join a community that helps support people in need of blood through a safe and well-organized platform.",
   "SIGNUP_VISUAL_FEATURE_1": "Quick and easy account creation",
   "SIGNUP_VISUAL_FEATURE_2": "Secure and protected data",
-  "SIGNUP_VISUAL_FEATURE_3": "Help save others’ lives"
+  "SIGNUP_VISUAL_FEATURE_3": "Help save others’ lives",
+
+
+   "Unread":"Unread",
+  "Active_Requests":"Active Requests",
+  "Current_Status":"Current Status",
+  "Total_Donations":"Total Donations",
+
+
+  "EligibilityStatusOpts":{
+    "Eligible":"Eligible",
+    "TempDeferred":"Temp Deferred",
+    "PermDeferred":"Perm Deferred"
+  }
+
 }
