@@ -45,13 +45,18 @@
           {{ "HOME" | translate }}
         </a>
       </li>
+      <li data-aos="zoom-in-left" data-aos-delay="400">
+        <a class="nav-link" routerLink="/user/donate" routerLinkActive="active">
+          {{ "DonateBlood" | translate }}
+        </a>
+      </li>
       <li data-aos="zoom-in-left" data-aos-delay="350">
         <a
           class="nav-link"
           routerLink="/user/requests"
           routerLinkActive="active"
         >
-          {{ "DONATION_REQUESTS" | translate }}
+          {{ "BLOOD_REQUEST" | translate }}
         </a>
       </li>
       <li data-aos="zoom-in-left" data-aos-delay="400">
@@ -68,7 +73,7 @@
     <!-- Right / End -->
     <a
       class="navbar-brand d-flex align-items-center m-0"
-      routerLink="/"
+      routerLink="/user/dashboard"
       data-aos="zoom-in-left"
       data-aos-delay="150"
     >

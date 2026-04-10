@@ -11,32 +11,32 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        loadComponent: () => import('./features/landing/pages/landing-page/landing-page.component')
+        loadComponent: () => import('./features/landing/presentation/pages/landing-page/landing-page.component')
           .then(c => c.LandingPageComponent),
       },
       {
         path: 'campaigns',
-        loadComponent: () => import('./features/landing/pages/campaigns-guest-page/campaigns-guest-page.component')
+        loadComponent: () => import('./features/landing/presentation/pages/campaigns-guest-page/campaigns-guest-page.component')
           .then(c => c.CampaignsGuestPageComponent),
       },
       {
         path: 'donation-requests',
-        loadComponent: () => import('./features/landing/pages/donation-requests-guest-page/donation-requests-guest-page.component')
+        loadComponent: () => import('./features/landing/presentation/pages/donation-requests-guest-page/donation-requests-guest-page.component')
           .then(c => c.DonationRequestsGuestPageComponent),
       },
       {
         path: 'contact-us',
-        loadComponent: () => import('./features/landing/pages/contact-us-page/contact-us-page.component')
+        loadComponent: () => import('./features/landing/presentation/pages/contact-us-page/contact-us-page.component')
           .then(c => c.ContactUsPageComponent),
       },
       {
         path: 'privacy-policy',
-        loadComponent: () => import('./features/landing/pages/privacy-page/privacy-page.component')
+        loadComponent: () => import('./features/landing/presentation/pages/privacy-page/privacy-page.component')
           .then(c => c.PrivacyPageComponent),
       },
       {
         path: 'terms-and-conditions',
-        loadComponent: () => import('./features/landing/pages/terms-and-conditions-page/terms-and-conditions-page.component')
+        loadComponent: () => import('./features/landing/presentation/pages/terms-and-conditions-page/terms-and-conditions-page.component')
           .then(c => c.TermsAndConditionsPageComponent),
       }
     ],
@@ -95,6 +95,11 @@ export const routes: Routes = [
         path: 'dashboard',
         loadComponent: () => import('./features/user/presentation/pages/user-dashboard/user-dashboard.component')
           .then(c => c.UserDashboardComponent),
+      },
+      {
+        path: 'donate',
+        loadComponent: () => import('./features/user/presentation/pages/donate-page/donate-page.component')
+          .then(c => c.DonatePageComponent)
       },
       {
         path: '**',

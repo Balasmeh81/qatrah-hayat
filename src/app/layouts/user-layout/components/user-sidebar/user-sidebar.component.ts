@@ -36,6 +36,6 @@ export class UserSidebarComponent {
   onLogout(): void {
     this.authState.clear();
     this.authService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['user-auth/login']);
   }
 }

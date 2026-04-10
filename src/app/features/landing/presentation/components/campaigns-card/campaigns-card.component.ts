@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageService } from '../../../../core/services/language.service';
+import { LanguageService } from '../../../../../core/services/language.service';
 @Component({
   selector: 'app-campaigns-card',
   standalone: true,

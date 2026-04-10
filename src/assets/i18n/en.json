@@ -389,7 +389,7 @@
   "SETTINGS": "Settings",
   "LOGOUT": "Logout",
 
-
+ "BLOOD_REQUEST":"Blood Request",
 
     "LOGIN_VISUAL_TITLE": "Together, We Save Lives",
   "LOGIN_VISUAL_SUBTITLE": "Sign in to access your account, track donation requests, and contribute to supporting people in need of blood safely and easily.",
@@ -401,5 +401,30 @@
   "SIGNUP_VISUAL_SUBTITLE": "Create your account now and join a community that helps support people in need of blood through a safe and well-organized platform.",
   "SIGNUP_VISUAL_FEATURE_1": "Quick and easy account creation",
   "SIGNUP_VISUAL_FEATURE_2": "Secure and protected data",
-  "SIGNUP_VISUAL_FEATURE_3": "Help save others’ lives"
+  "SIGNUP_VISUAL_FEATURE_3": "Help save others’ lives",
+
+
+   "Unread":"Unread",
+  "Active_Requests":"Active Requests",
+  "Current_Status":"Current Status",
+  "Total_Donations":"Total Donations",
+
+
+  "EligibilityStatusOpts":{
+    "Eligible":"Eligible",
+    "TempDeferred":"Temp Deferred",
+    "PermDeferred":"Perm Deferred"
+  },
+
+
+  "USER_DASHBOARD": {
+    "URGENT_BLOOD_NEEDS": {
+      "TITLE": "Urgent Blood Needs",
+      "DONATE": "Donate",
+      "NEED": "NEED",
+      "BLOOD_TYPE": "Blood Type"
+    }
+  }
+
+
 }
