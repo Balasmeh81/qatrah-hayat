@@ -424,6 +424,21 @@
       "NEED": "NEED",
       "BLOOD_TYPE": "Blood Type"
     }
+  },
+
+  "DONATE_PAGE": {
+    "PRIVATE_DONATION": "Donate to a Specific Patient",
+    "PRIVATE_DONATION_DESC": "Direct your donation to a specific patient or case using the approved medical number or beneficiary details.",
+    "GENERAL_DONATION": "Donate to General Blood Stock",
+    "GENERAL_DONATION_DESC": "Support the available blood stock to help patients based on urgency and actual need.",
+    "CAMPAIGN_DONATION": "Donate Through a Campaign",
+    "CAMPAIGN_DONATION_DESC": "Join an active donation campaign and support organized humanitarian initiatives at scheduled locations and times.",
+    "DONATE_NOW": "Donate Now",
+    "PRIVATE_BADGE": "Specific",
+    "GENERAL_BADGE": "General",
+    "CAMPAIGN_BADGE": "Campaign",
+    "SECTION_TITLE": "Donate Blood, Save Lives",
+    "SECTION_DESC": "Choose the type of donation that suits you and contribute to saving lives."
   }
 
 
